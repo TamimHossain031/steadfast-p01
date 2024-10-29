@@ -22,6 +22,3 @@ a{
   border:1px solid red;
 }
 
-@layer components{
-  .navigation
-}
