@@ -11,7 +11,7 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 function App() {
   return(
-      <div className='container overflow-x-hidden'>
+      <div className='bg-bgDark pb-1.5'>
         <Router>
           <Header/>
           <Routes>

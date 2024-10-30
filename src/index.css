@@ -4,10 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  p{
+    @apply text-[16px] font-normal leading-[150%] text-primary
+  }
+}
 @layer components {
   /* navigation */
   .navigation {
-    @apply flex gap-[32px];
+    @apply flex gap-[32px] flex-col text-center justify-center absolute md:static  top-0 bg-bgDark2 w-dvw h-dvh md:w-fit md:h-fit md:flex-row md:bg-transparent z-10;
   }
   .navigation a {
     @apply p-[10px] transition-colors hover:text-accent1 ;
@@ -15,14 +20,40 @@
 
   /* header */
   .header-wrap {
-    @apply flex justify-between min-h-[48px] items-center pt-[24px];
+    @apply flex justify-between min-h-[48px] items-center pt-[24px] px-6 xl:px-0;
   }
   .cart-btn{
     @apply w-[48px] h-[48px] bg-accent1 rounded-full grid place-content-center
   }
-  /* .icon{
-    @apply text-white
-  } */
+ 
+  /* hero */
+  .hero{
+    @apply  bg-bgHero mt-[0px] relative
+  }
+  .hero-title{
+    @apply text-[150px] font-light font2 leading-[200%]
+  }
+  .hero-content{
+    @apply text-[16px] font-normal leading-[150%] text-primary max-w-[526px] w-full
+  }
+
+  /* service */
+  .service{
+    @apply flex justify-between
+  }
+  .service-card{
+    @apply w-[311px] border-r-[1px] border-darkGray flex gap-[20px] align-middle [&>span]:content-center pl-[30px]
+  }
+  .service-title{
+    @apply text-[20px] font-medium leading-[140%] text-lightGray capitalize mb-[10px]
+  }
+  
+  /* button */
+  .btn-primary{
+    @apply py-[16px] px-[24px] bg-accent1 rounded-[4px] flex gap-2 capitalize text-[16px]
+  }
+
+
 }
 
 * {
@@ -32,12 +63,27 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
+body{
+  overflow-x:hidden;
+}
 a {
   color: #fff;
   display: inline-block;
 }
 .container {
   max-width: 1300px;
+  width:100%;
   margin-inline: auto;
   
+}
+.unset{
+  position:unset;
+}
+.center-wrap{
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%)
+}
+.font2{
+  font-family:Fraunces
 }

@@ -1,8 +1,11 @@
+import Hero from "../components/Home/Hero";
+import Service from "../components/Home/Service";
 
 export default function Home(){
     return (
-            <>	
-         <h1>home</h1>
-            </>
+            <section>	
+                <Hero/>
+                <Service/>
+            </section>
     );
 }
