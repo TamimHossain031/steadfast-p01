@@ -15,7 +15,7 @@ export default function Header() {
   const toggleNav = () => setNavShow(!navShow);
 
   return (
-    <header className="z-[1000] w-[1440px] fixed top-0 ">
+    <header className="z-[1000] max-w-[1440px] w-full fixed top-0 ">
       <div className="header-wrap container">
         {/* //logo */}
         <Link to="/">

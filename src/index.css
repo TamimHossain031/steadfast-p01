@@ -52,6 +52,14 @@
   .btn-primary{
     @apply py-[16px] px-[24px] bg-accent1 rounded-[4px] flex gap-2 capitalize text-[16px]
   }
+  .disable{
+    @apply cursor-default opacity-[0.5]
+  }
+
+  /* title */
+  .title{
+    @apply text-[40px] font-semibold text-white leading-[120%] font2
+  }
 
 
 }
