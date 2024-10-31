@@ -14,7 +14,8 @@ export default {
         bgHero: "#262422",
         bgSideProduct:'#35241D',
         darkGray:'#525252',
-        lightGray:'#d4d4d4'
+        lightGray:'#d4d4d4',
+        cardTitle:'#e5e5e5'
       },
     },
     

@@ -1,44 +1,46 @@
 // import Swiper core and required modules
+import { useRef, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {useState,useRef} from 'react';
+import { data } from "../../Db/category";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import SingleCategory from "./SingleCategory";
 
 export default function TopCategory() {
-  const [slideBegOrNot,handleSlideByState] = useState({
-    isFirst:true,
-    isLast:false
-  })
+  const [slideBegOrNot, handleSlideByState] = useState({
+    isFirst: true,
+    isLast: false,
+  });
   const sliderRef = useRef();
 
-  const handleNext=()=>{
+  const handleNext = () => {
     sliderRef.current.swiper.slideNext();
-  }
-  const handlePrev=()=>{
+  };
+  const handlePrev = () => {
     sliderRef.current.swiper.slidePrev();
-  }
-  const onSlideChange=(swiper)=>{
+  };
+  const onSlideChange = (swiper) => {
     handleSlideByState({
-      isFirst:swiper.isBeginning,
-      isLast:swiper.isEnd
-    })
-  }
+      isFirst: swiper.isBeginning,
+      isLast: swiper.isEnd,
+    });
+  };
 
-  const{isLast,isFirst} = slideBegOrNot;
+  const { isLast, isFirst } = slideBegOrNot;
   return (
-    <section className="container">
+    <section className="container mb-[135px]">
       <div className="align-middle mb-[48px] flex justify-between">
         <h2 className="title ">Top Categories</h2>
         <div className="flex gap-4">
-          <button className={isFirst ? 'disable' : ''} onClick={handlePrev}>
-            <BsArrowLeft color="white" size={20}/>{" "}
+          <button className={isFirst ? "disable" : ""} onClick={handlePrev}>
+            <BsArrowLeft color="white" size={20} />{" "}
           </button>
-          <button className={isLast ? 'disable' : ''} onClick={ handleNext}>
+          <button className={isLast ? "disable" : ""} onClick={handleNext}>
             {" "}
-            <BsArrowRight color="white" size={20}/>
+            <BsArrowRight color="white" size={20} />
           </button>
         </div>
       </div>
@@ -66,29 +68,12 @@ export default function TopCategory() {
           },
         }}
       >
-        <SwiperSlide>
-          <div className="h-[460px] border"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="h-[460px] border"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="h-[460px] border"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="h-[460px] border"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="h-[460px] border"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="h-[460px] border"></div>
-        </SwiperSlide>
+        {data.length &&
+          data.map((slide, index) => (
+            <SwiperSlide key={index}>
+             <SingleCategory data ={slide}/>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </section>
   );
