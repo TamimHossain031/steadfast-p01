@@ -1,15 +1,16 @@
 // import Swiper core and required modules
 import { useRef, useState } from "react";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import {Link} from 'react-router-dom';
+import { GoChevronLeft,GoChevronRight } from "react-icons/go";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { data } from "../../Db/category";
+import { data } from "../Db/products";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import SingleCategory from "./SingleCategory";
+import SingleProduct from "./SingleProduct";
 
-export default function TopCategory() {
+export default function DiscountedProduct() {
   const [slideBegOrNot, handleSlideByState] = useState({
     isFirst: true,
     isLast: false,
@@ -31,16 +32,17 @@ export default function TopCategory() {
 
   const { isLast, isFirst } = slideBegOrNot;
   return (
-    <section className="container mb-[135px]">
+    <section className="container mb-[135px] mt-[100px]">
       <div className="align-middle mb-[48px] flex justify-between">
         <h2 className="title ">Top Categories</h2>
-        <div className="flex gap-4">
-          <button className={isFirst ? "disable" : ""} onClick={handlePrev}>
-            <BsArrowLeft color="white" size={20} />{" "}
+        <div className="flex gap-4 items-center">
+            <Link className='mr-6'>View All</Link>
+          <button className={`${isFirst ? "disable bg-neutral-300" : "bg-neutral-100"} w-[48px] h-[48px] rounded-full flex justify-center items-center`} onClick={handlePrev}>
+            <GoChevronLeft size={20} />{" "}
           </button>
-          <button className={isLast ? "disable" : ""} onClick={handleNext}>
+          <button className={`${isLast ? "disable bg-neutral-300" : "bg-neutral-100"} w-[48px] h-[48px] rounded-full flex justify-center items-center`} onClick={handleNext}>
             {" "}
-            <BsArrowRight color="white" size={20} />
+            <GoChevronRight size={20} />
           </button>
         </div>
       </div>
@@ -63,17 +65,16 @@ export default function TopCategory() {
           865: {
             slidesPerView: 3,
           },
-          1000: {
-            slidesPerView: 4,
-          },
         }}
       >
         {data.length &&
-          data.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <SingleCategory data={slide} />
-            </SwiperSlide>
-          ))}
+          data
+            .filter((data) => data.label == "sale")
+            .map((slide, index) => (
+              <SwiperSlide key={index}>
+                <SingleProduct data={slide} />
+              </SwiperSlide>
+            ))}
       </Swiper>
     </section>
   );

@@ -1,3 +1,4 @@
+import DiscountedProduct from "../components/DiscountedProduct";
 import BestProducts from "../components/Home/BestProducts";
 import Customers from "../components/Home/Customers";
 import Hero from "../components/Home/Hero";
@@ -14,6 +15,7 @@ export default function Home(){
                 <BestProducts/>
                 <TrendingProduct/>
                 <Customers/>
+                <DiscountedProduct/>
             </section>
     );
 }
