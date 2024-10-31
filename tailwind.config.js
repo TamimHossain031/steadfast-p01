@@ -15,7 +15,10 @@ export default {
         bgSideProduct:'#35241D',
         darkGray:'#525252',
         lightGray:'#d4d4d4',
-        cardTitle:'#e5e5e5'
+        cardTitle:'#e5e5e5',
+        bullet:'#7B5444',
+        starColor:'#F5B303',
+        customerDesg:'#DFC9C0'
       },
     },
     

@@ -1,4 +1,5 @@
 import BestProducts from "../components/Home/BestProducts";
+import Customers from "../components/Home/Customers";
 import Hero from "../components/Home/Hero";
 import Service from "../components/Home/Service";
 import TopCategory from "../components/Home/TopCategory";
@@ -12,6 +13,7 @@ export default function Home(){
                 <TopCategory/>
                 <BestProducts/>
                 <TrendingProduct/>
+                <Customers/>
             </section>
     );
 }

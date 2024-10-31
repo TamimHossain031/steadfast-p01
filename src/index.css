@@ -4,9 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  p{
-    @apply text-[16px] font-normal leading-[150%] text-primary
+@layer base {
+  p {
+    @apply text-[16px] font-normal leading-[150%] text-primary;
   }
 }
 @layer components {
@@ -15,60 +15,58 @@
     @apply flex gap-[32px] flex-col text-center justify-center absolute md:static  top-0 bg-bgDark2 w-dvw h-dvh md:w-fit md:h-fit md:flex-row md:bg-transparent z-10;
   }
   .navigation a {
-    @apply p-[10px] transition-colors hover:text-accent1 ;
+    @apply p-[10px] transition-colors hover:text-accent1;
   }
 
   /* header */
   .header-wrap {
     @apply flex justify-between min-h-[48px] items-center pt-[24px] px-6 xl:px-0;
   }
-  .cart-btn{
-    @apply w-[48px] h-[48px] bg-accent1 rounded-full grid place-content-center
+  .cart-btn {
+    @apply w-[48px] h-[48px] bg-accent1 rounded-full grid place-content-center;
   }
- 
+
   /* hero */
-  .hero{
-    @apply  bg-bgHero mt-[0px] relative
+  .hero {
+    @apply bg-bgHero mt-[0px] relative;
   }
-  .hero-title{
-    @apply text-[150px] font-light font2 leading-[200%]
+  .hero-title {
+    @apply text-[150px] font-light font2 leading-[200%];
   }
-  .hero-content{
-    @apply text-[16px] font-normal leading-[150%] text-primary max-w-[526px] w-full
+  .hero-content {
+    @apply text-[16px] font-normal leading-[150%] text-primary max-w-[526px] w-full;
   }
 
   /* service */
-  .service{
-    @apply flex justify-between
+  .service {
+    @apply flex justify-between;
   }
-  .service-card{
-    @apply w-[311px] border-r-[1px] border-darkGray flex gap-[20px] align-middle [&>span]:content-center pl-[30px]
+  .service-card {
+    @apply w-[311px] border-r-[1px] border-darkGray flex gap-[20px] align-middle [&>span]:content-center pl-[30px];
   }
-  .service-title{
-    @apply text-[20px] font-medium leading-[140%] text-lightGray capitalize mb-[10px]
+  .service-title {
+    @apply text-[20px] font-medium leading-[140%] text-lightGray capitalize mb-[10px];
   }
-  
+
   /* button */
-  .btn-primary{
-    @apply py-[16px] px-[24px] rounded-[4px] flex gap-2 capitalize text-[16px]
+  .btn-primary {
+    @apply py-[16px] px-[24px] rounded-[4px] flex gap-2 capitalize text-[16px];
   }
- 
-  .disable{
-    @apply cursor-default opacity-[0.5]
+
+  .disable {
+    @apply cursor-default opacity-[0.5];
   }
 
   /* title */
-  .title{
-    @apply text-[40px] font-semibold text-white leading-[120%] font2
+  .title {
+    @apply text-[40px] font-semibold text-white leading-[120%] font2;
   }
-  .title2{
-    @apply text-[32px] font-normal leading-[125%] text-cardTitle font2
+  .title2 {
+    @apply text-[32px] font-normal leading-[125%] text-cardTitle font2;
   }
-  .p-title{
-    @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize
+  .p-title {
+    @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize;
   }
-
-
 }
 
 * {
@@ -78,8 +76,8 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
-body{
-  overflow-x:hidden;
+body {
+  overflow-x: hidden;
 }
 a {
   color: #fff;
@@ -87,21 +85,74 @@ a {
 }
 .container {
   max-width: 1300px;
-  width:100%;
+  width: 100%;
   margin-inline: auto;
-  
 }
-.unset{
-  position:unset;
+.unset {
+  position: unset;
 }
-.center-wrap{
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%)
+.center-wrap {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.font2{
-  font-family:Fraunces
+.font2 {
+  font-family: Fraunces;
 }
-.hover-effect1:hover > span{
-  transform:translateX(10px);
+.hover-effect1:hover > span {
+  transform: translateX(10px);
+}
+.customerSwiper {
+  min-height: 380px;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:7px;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #7b5444;
+  opacity: 1;
+  margin-block: 5px;
+}
+.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid #c09381;
+  position: relative;
+}
+.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-47%, -55%);
+  width: 11px;
+  height: 11px;
+  background: #c09381;
+  border-radius: 50%;
+}
+
+.afterBorder{
+  position:relative;
+
+}
+.afterBorder::after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:-4%;
+  width:2px;
+  height:100%;
+  background:#525252;
 }
