@@ -5,7 +5,7 @@ import shipping from "../../assets/services/shipped (1).svg";
 export default function Service() {
   return (
     <section className="service container mt-[85px] mb-[98px]">
-      <div className="service-card">
+      <div className="service-card pl-0">
         <span>
           <img src={shipping} alt="" />
         </span>

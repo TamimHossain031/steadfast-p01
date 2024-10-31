@@ -9,7 +9,7 @@ export default function SingleProduct({data}){
                     <img src={img} alt={img} />
                 </figure>
                 <h3 className='p-title pt-4'>{title}</h3>
-                <h2 className='text-[20px] font-semibold leading-[140%] mt-1'>{newPrice}$ <del className='ml-3 font-normal text-cardTitle text-[18px]'>{oldPrice}$</del></h2>
+                <h2 className='text-[20px] font-medium leading-[140%] mt-1'>{newPrice}$ <del className='ml-3 font-normal text-cardTitle text-[18px]'>{oldPrice}$</del></h2>
             </div>
     );
 }

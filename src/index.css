@@ -61,8 +61,11 @@
   .title{
     @apply text-[40px] font-semibold text-white leading-[120%] font2
   }
+  .title2{
+    @apply text-[32px] font-normal leading-[125%] text-cardTitle font2
+  }
   .p-title{
-    @apply text-[18px] font-normal leading-[156%] text-cardTitle
+    @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize
   }
 
 

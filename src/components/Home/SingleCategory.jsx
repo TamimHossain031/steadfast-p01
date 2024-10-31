@@ -15,7 +15,7 @@ export default function SingleCategory({data}){
            
            <div className='text-center translate-y-[60px] group-hover:translate-y-[0px] transition duration-500'>
             <h3 className='service-title font-semibold'>{categroy}</h3>
-            <p className='text-cardTitle'>{quantity} product</p>
+            <p className='text-cardTitle '>{quantity} Product</p>
             <Link>
             <Button className='btn-primary hover:delay-75 mt-[14px]'></Button>
             </Link>
