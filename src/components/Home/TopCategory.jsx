@@ -34,7 +34,7 @@ export default function TopCategory() {
     <section className="container mb-[135px]">
       <div className="align-middle mb-[48px] flex justify-between">
         <h2 className="title ">Top Categories</h2>
-        <div className="flex gap-4">
+        <div className="flex gap-4 *:w-[48px] *:h-[48px] *:grid *:place-content-center">
           <button className={isFirst ? "disable" : ""} onClick={handlePrev}>
             <BsArrowLeft color="white" size={20} />{" "}
           </button>

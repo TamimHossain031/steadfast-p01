@@ -6,16 +6,16 @@ import Service from "../components/Home/Service";
 import TopCategory from "../components/Home/TopCategory";
 import TrendingProduct from "../components/Home/TrendingProduct";
 
-export default function Home(){
-    return (
-            <section>	
-                <Hero/>
-                <Service/>
-                <TopCategory/>
-                <BestProducts/>
-                <TrendingProduct/>
-                <Customers/>
-                <DiscountedProduct/>
-            </section>
-    );
+export default function Home() {
+  return (
+    <section>
+      <Hero />
+      <Service />
+      <TopCategory />
+      <BestProducts />
+      <TrendingProduct />
+      <Customers />
+      <DiscountedProduct />
+    </section>
+  );
 }

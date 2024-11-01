@@ -9,11 +9,12 @@ import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Shop from "./pages/Shop";
 import Signup from "./pages/Signup";
+import Footer from "./components/Footer";
 function App() {
   return (
-    <div className="bg-bgDark pb-1.5">
+    <div className="bg-bgDark pb-[23px]">
       <Router>
-        <Header />
+        <Header />        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
@@ -25,7 +26,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
+        <Footer/>
       </Router>
+      
     </div>
   );
 }

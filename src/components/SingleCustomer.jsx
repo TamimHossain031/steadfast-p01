@@ -2,8 +2,7 @@
 import { GiRoundStar } from "react-icons/gi";
 export default function SingleCustomer({data}){
     const {img,description,star,name,designation} = data;
-    const starCount = Array(star).fill('s');
-    console.log(starCount)
+    const starCount = Array(star).fill('s');    
     return (
         <div className="h-[276px] grid place-content-center place-items-center afterBorder">
             <img className='w-[99px] h-[99px] rounded-full mb-6' src={img} alt={img} />

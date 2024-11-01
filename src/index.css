@@ -67,6 +67,14 @@
   .p-title {
     @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize;
   }
+  .f-title{
+    @apply  text-[20px] font-medium
+  }
+
+  /* footer */
+  .footer-link{
+    @apply mt-1 *:w-[40px] *:h-[40px] flex gap-[10px] *:border *:border-fBtnBorder *:bg-fBtnBg *:text-fBtnBorder *:grid *:place-content-center *:rounded-full *:transition-colors
+  }
 }
 
 * {
@@ -128,6 +136,7 @@ a {
   background: transparent;
   border: 1.5px solid #c09381;
   position: relative;
+  padding:0;
 }
 .swiper-horizontal
   > .swiper-pagination-bullets
@@ -136,7 +145,7 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-47%, -55%);
+  transform: translate(-50%, -50%);
   width: 11px;
   height: 11px;
   background: #c09381;
@@ -155,4 +164,22 @@ a {
   width:2px;
   height:100%;
   background:#525252;
+}
+.footer-link > a:hover{
+  color:#007BB5;
+}
+
+.cardBtn{
+  width:48px;
+  height:48px;
+  background:#fff;
+  display:grid;
+  place-content:center;
+  transition:all 0.3s ease;
+  color:#737373;
+  font-size:24px;
+}
+.cardBtn:hover{
+  background:#0a0a0a;
+  color:#fff;
 }
