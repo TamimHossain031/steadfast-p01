@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import { Link } from "react-router-dom";
@@ -7,15 +7,25 @@ import cart from "../assets/header/cart.svg";
 import logo from "../assets/header/logo.svg";
 import wishlist from "../assets/header/wish.svg";
 import Nav from "./Nav";
+import addHeaderBg from "./Helpers/addHeaderBg";
+
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
-  const [navShow, setNavShow] = useState(false);
+  const [navShow, setNavShow] = useState(true);
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const toggleNav = () => setNavShow(!navShow);
 
+  useEffect(() => {
+   //add header Bg
+   addHeaderBg();
+  }, []);
+
   return (
-    <header className="z-[1000] max-w-[1440px] w-full fixed top-0 ">
+    <header
+      className="z-[1000] max-w-[1440px] w-full fixed top-0 pb-5"
+      id="header"
+    >
       <div className="header-wrap container">
         {/* //logo */}
         <Link to="/">

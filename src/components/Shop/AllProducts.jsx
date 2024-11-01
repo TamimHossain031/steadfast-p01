@@ -13,7 +13,7 @@ export default function AllProducts() {
           Home
         </Link>
         <RiArrowDropRightLine className="text-primary text-[25px]" />
-        <Link>Shop</Link>
+        <p className='text-white'>Shop</p>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-8'>
         {doubleData.length && doubleData.map((single,index)=>(

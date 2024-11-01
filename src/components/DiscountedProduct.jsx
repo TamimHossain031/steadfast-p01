@@ -1,7 +1,7 @@
 // import Swiper core and required modules
 import { useRef, useState } from "react";
-import {Link} from 'react-router-dom';
-import { GoChevronLeft,GoChevronRight } from "react-icons/go";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { data } from "../Db/products";
@@ -36,11 +36,21 @@ export default function DiscountedProduct() {
       <div className="align-middle mb-[48px] flex justify-between">
         <h2 className="title ">Recently Discounted</h2>
         <div className="flex gap-4 items-center">
-            <Link className='f-title mr-6 text-primary'>View All</Link>
-          <button className={`${isFirst ? "disable bg-gray" : "bg-neutral-100"} w-[48px] h-[48px] rounded-full flex justify-center items-center`} onClick={handlePrev}>
+          <Link className="f-title mr-6 text-primary">View All</Link>
+          <button
+            className={`${
+              isFirst ? "disable bg-gray" : "bg-neutral-100"
+            } w-[48px] h-[48px] rounded-full flex justify-center items-center`}
+            onClick={handlePrev}
+          >
             <GoChevronLeft size={20} />{" "}
           </button>
-          <button className={`${isLast ? "disable bg-gray" : "bg-neutral-100"} w-[48px] h-[48px] rounded-full flex justify-center items-center`} onClick={handleNext}>
+          <button
+            className={`${
+              isLast ? "disable bg-gray" : "bg-neutral-100"
+            } w-[48px] h-[48px] rounded-full flex justify-center items-center`}
+            onClick={handleNext}
+          >
             {" "}
             <GoChevronRight size={20} />
           </button>
