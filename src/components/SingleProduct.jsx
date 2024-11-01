@@ -8,7 +8,7 @@ export default function SingleProduct({ data }) {
 
   return (
     <Link>
-     <div className={`max-h-[548px] relative text-white text-center cursor-pointer ${path == 'shop' && ''}` }>
+     <div className={`max-h-[548px] relative text-white text-center cursor-pointer group overflow-hidden` }>
       <span
         className={`absolute top-[14px] left-[14px]   uppercase rounded-[4px] ${
           label == "new" ? "bg-blue" : "bg-red"
@@ -29,15 +29,18 @@ export default function SingleProduct({ data }) {
       </h2>
 
       {/* hover icon */}
-      <div className='absolute grid gap-[6px] top-[97px] left-[14px]'>
+      <div className={`absolute grid gap-[6px] top-[97px] left-[14px] -translate-x-[70px] group-hover:translate-x-[0px] transition-transform duration-500 ${path !== 'shop' && 'hidden'}`}>
         <button className='cardBtn'>
           <PiShoppingCartSimpleLight/>
+          <span id='tooltip-right'>Add to Cart</span>
         </button>
         <button  className='cardBtn'>
           <PiHeartStraightLight/>
+          <span id='tooltip-right'>Add to Wish</span>
         </button>
         <button  className='cardBtn'>
           <PiEyeLight/>
+          <span id='tooltip-right'>View</span>
         </button>
       </div>
     </div>

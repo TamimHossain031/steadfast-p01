@@ -67,13 +67,13 @@
   .p-title {
     @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize;
   }
-  .f-title{
-    @apply  text-[20px] font-medium
+  .f-title {
+    @apply text-[20px] font-medium;
   }
 
   /* footer */
-  .footer-link{
-    @apply mt-1 *:w-[40px] *:h-[40px] flex gap-[10px] *:border *:border-fBtnBorder *:bg-fBtnBg *:text-fBtnBorder *:grid *:place-content-center *:rounded-full *:transition-colors
+  .footer-link {
+    @apply mt-1 *:w-[40px] *:h-[40px] flex gap-[10px] *:border *:border-fBtnBorder *:bg-fBtnBg *:text-fBtnBorder *:grid *:place-content-center *:rounded-full *:transition-colors;
   }
 }
 
@@ -117,7 +117,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:7px;
+  gap: 7px;
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   width: 11px;
@@ -136,7 +136,7 @@ a {
   background: transparent;
   border: 1.5px solid #c09381;
   position: relative;
-  padding:0;
+  padding: 0;
 }
 .swiper-horizontal
   > .swiper-pagination-bullets
@@ -152,34 +152,67 @@ a {
   border-radius: 50%;
 }
 
-.afterBorder{
-  position:relative;
-
+.afterBorder {
+  position: relative;
 }
-.afterBorder::after{
+.afterBorder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -4%;
+  width: 2px;
+  height: 100%;
+  background: #525252;
+}
+.footer-link > a:hover {
+  color: #007bb5;
+}
+
+.cardBtn {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  display: grid;
+  place-content: center;
+  transition: all 0.3s ease;
+  color: #737373;
+  font-size: 24px;
+  postiion: relative;
+}
+
+
+#tooltip-right {
+  position: absolute;
+  transform: translate(66px, 6px);
+  width: 98px;
+  height: 36px;
+  border-radius: 4px;
+  text-wrap: no-wrap;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: #fff;
+  background:#262626;
+  padding-top:7px;
+  pointer-events: none;
+  opacity:0;
+  transition:opacity 0.3s ease;
+}
+#tooltip-right::after{
   content:'';
   position:absolute;
-  top:0;
-  right:-4%;
-  width:2px;
-  height:100%;
-  background:#525252;
-}
-.footer-link > a:hover{
-  color:#007BB5;
+  top:50%;
+  right:100%;
+  transform:translateY(-50%);
+  border:8px solid;
+  border-color:transparent #262626 transparent transparent;  
 }
 
-.cardBtn{
-  width:48px;
-  height:48px;
-  background:#fff;
-  display:grid;
-  place-content:center;
-  transition:all 0.3s ease;
-  color:#737373;
-  font-size:24px;
+.cardBtn:hover {
+  background: #0a0a0a;
+  color: #fff;
 }
-.cardBtn:hover{
-  background:#0a0a0a;
-  color:#fff;
+.cardBtn:hover > #tooltip-right{
+opacity:1;
+
 }
