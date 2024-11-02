@@ -6,6 +6,10 @@ const data = [
     newPrice: 22,
     label: "new",
     img: "https://i.postimg.cc/SQMnxq9z/01.png",
+    stock:5,
+    star:2.5,
+    review:10,
+    sold:205,
     images:[
       {
         id:1,
@@ -28,6 +32,10 @@ const data = [
     newPrice: 22,
     label: "sale",
     img: "https://i.postimg.cc/x1bxsXN1/02.png",
+    stock:5,
+    star:2.5,
+    review:50,
+    sold:250,
     images:[
       {
         id:1,
@@ -50,6 +58,10 @@ const data = [
     newPrice: 22,
     label: "new",
     img: "https://i.postimg.cc/JhLqPPWp/03.png",
+    stock:0,
+    star:5,
+    review:15,
+    sold:2050,
     images:[
       {
         id:1,
@@ -72,6 +84,10 @@ const data = [
     newPrice: 22,
     label: "new",
     img: "https://i.postimg.cc/QtNqrCC5/04.png",
+    stock:5,
+    star:4,
+    review:150,
+    sold:2050,
     images:[
       {
         id:1,
@@ -95,6 +111,10 @@ const data = [
     newPrice: 22,
     label: "sale",
     img: "https://i.postimg.cc/XJ2kNWBP/05.png",
+    stock:3,
+    star:1.5,
+    review:150,
+    sold:2050,
     images:[
       {
         id:1,
@@ -117,6 +137,10 @@ const data = [
     newPrice: 22,
     label: "sale",
     img: "https://i.postimg.cc/PJPzP7m5/06.png",
+    stock:5,
+    star:3.5,
+    review:150,
+    sold:2050,
     images:[
       {
         id:1,

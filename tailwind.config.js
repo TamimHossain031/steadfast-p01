@@ -8,6 +8,7 @@ export default {
         dark:'#0a0a0a',
         primary: "#a3a3a3",
         accent1: "#d7aa38",
+        green:'#22C55E',
         red: "#ef4444",
         blue: "#3b82f6",
         bgDark: "#1E1B18",

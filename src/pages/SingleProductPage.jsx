@@ -3,10 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import DiscountedProduct from "../components/DiscountedProduct";
 import { data } from "../Db/products";
 import ProductImage from "../components/SingleProductPage/ProductImage";
+import ProductDescription from "../components/SingleProductPage/ProductDescription";
 export default function SingleProductPage() {
   const { id } = useParams();
   let [product] = data.filter((single) => single.title == id);
-  const {images,title} = product;  
+  const {images,...description} = product;  
   
 
   return (
@@ -21,10 +22,11 @@ export default function SingleProductPage() {
             Shop
           </Link>
           <RiArrowDropRightLine className="text-primary text-[25px]" />
-          <span className="text-darkGray">{title}</span>
+          <span className="text-darkGray">{description.title}</span>
         </div>
-        <div>
+        <div className='flex gap-[63px]'>
           <ProductImage images={images}/>
+          <ProductDescription {...description} />
         </div>
       </div>
       <DiscountedProduct />
