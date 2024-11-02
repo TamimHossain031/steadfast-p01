@@ -1,29 +1,35 @@
+import { useState } from "react";
+import AddQuantity from "../AddQuantity";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
 import Colors from "./Color";
 import Rating from "./Rating";
-import {useState} from 'react';
+import {Link} from 'react-router-dom';
 export default function ProductDescription(description) {
-  const { title, stock, star, review, sold, oldPrice, newPrice,colors } = description;
+  const { title, stock, star, review, sold, oldPrice, newPrice, colors } =
+    description;
 
-  const [productData,setProductData]= useState({
+  const [productData, setProductData] = useState({
     title,
-    color:colors[0].hexCode,
-    quantity:0
-  })
+    color: colors[0].hexCode,
+    quantity: 1,
+  });
 
-  const updateProduct = (data)=>{
+  const updateProduct = (data) => {
+    if (data.type == "quantity") {
+      if (data.payload < 1) {
+        return false;
+      } else if (data.payload > stock) return false;
+    }
+
     setProductData({
-        ...productData,
-        [data.type] : data.payload
-    })
+      ...productData,
+      [data.type]: data.payload,
+    });
+  };
 
-    
-  }
-
-  
-  console.log(productData);
-  
   return (
-    <div className="flex-1">
+    <div className="flex-1 ">
       <h2 className="font-medium text-[24px] leading-[133%] text-white my-[10px]">
         {title}
       </h2>
@@ -54,11 +60,25 @@ export default function ProductDescription(description) {
         </del>
         <span className="font-medium text-[18px] leading-[156%] text-green">
           {oldPrice - newPrice}%off
-        </span>        
+        </span>
       </div>
 
       {/* color */}
-      <Colors color={colors} setColor={productData.color} setData={updateProduct}/>
+      <Colors
+        color={colors}
+        setColor={productData.color}
+        setData={updateProduct}
+      />
+
+      {/* addQuantity */}
+      <AddQuantity getData={productData} setData={updateProduct} />
+
+      {/* buy link */}
+      <div className='btn-group mt-[59px] '>
+      <Link className='cart-hover'><HiOutlineShoppingBag className='text-[24px] bounceNew'/> buy now</Link>
+      <Link className='bg-accent2 cart-hover'><MdOutlineAddShoppingCart className='text-[24px] bounceNew'/> add to cart</Link>
+      </div>
+     
     </div>
   );
 }

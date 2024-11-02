@@ -15,7 +15,7 @@ export default function TrendingProduct() {
               Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
-            <Link>
+            <Link to='/shop'>
               <Button className="btn-primary bg-accent1 text-white" />
             </Link>
           </div>

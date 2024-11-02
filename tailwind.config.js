@@ -13,6 +13,7 @@ export default {
         dark:'#0a0a0a',
         primary: "#a3a3a3",
         accent1: "#d7aa38",
+        accent2:'#737373',
         green:'#22C55E',
         red: "#ef4444",
         blue: "#3b82f6",
@@ -29,8 +30,8 @@ export default {
         customerDesg:'#DFC9C0',
         fBtnBorder:'#9D9D9D',
         fBtnBg:'#F8F8F8',
-        
-
+        quantityColor:'#4b4b4b',
+        quantityBtn:'#9A9A9A'
       },
     },
     
