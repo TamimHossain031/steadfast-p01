@@ -8,7 +8,7 @@ export default function TrendingProduct() {
         <div className="flex align-bottom gap-[30px]">
           <div className="mt-[66px] ml-[40px] mb-[86px]">
             <h3 className="title2">Trending Wallet Collection</h3>
-            <h2 className="text-[64px] font-semibold font2 leading-[125%] text-white mt-[35px] mb-[21px]">
+            <h2 className="text-[64px] font-semibold font-fraunces leading-[125%] text-white mt-[35px] mb-[21px]">
               UPTO 50% OFF
             </h2>
             <p className="max-w-[575px]">

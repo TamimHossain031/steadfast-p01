@@ -11,7 +11,7 @@ export default function SingleProduct({ data }) {
   const path = location.pathname.slice(1);
 
   return (
-    <Link to={`/singleProduct/${title}`}>
+    <Link to={`/singleProduct/${title}`} preventScrollReset={true}>
       <div
         className={`max-h-[548px] relative text-white text-center cursor-pointer group overflow-hidden`}
       >

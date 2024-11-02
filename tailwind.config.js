@@ -3,6 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily:{
+        poppins:["Poppins", 'sans-serif'],
+        fraunces:["Fraunces", 'serif'],
+        workSans:["Work Sans", 'sans-serif']
+      },
       colors: {
         white:'#ffffff',
         dark:'#0a0a0a',

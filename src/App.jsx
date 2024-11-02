@@ -11,11 +11,13 @@ import Shop from "./pages/Shop";
 import Signup from "./pages/Signup";
 import SingleProductPage from "./pages/SingleProductPage";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/Helpers/ScrollToTop";
 function App() {
   return (
     <div className="bg-bgDark pb-[23px]">
       <Router>
-        <Header />        
+        <Header />  
+        <ScrollToTop/>      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

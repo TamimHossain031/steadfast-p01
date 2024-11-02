@@ -10,6 +10,23 @@ const data = [
     star:2.5,
     review:10,
     sold:205,
+    colors:[
+      {
+        name:'black',
+        hexCode:'#0A0A0A'
+      },
+      {
+        name:'orange',
+        hexCode:'#F97316'
+      },
+      {
+        name:'green',
+        hexCode:'#22C55E'
+      },
+      
+    ],
+
+    
     images:[
       {
         id:1,
@@ -36,6 +53,21 @@ const data = [
     star:2.5,
     review:50,
     sold:250,
+    colors:[
+      {
+        name:'black',
+        hexCode:'#0A0A0A'
+      },
+      {
+        name:'orange',
+        hexCode:'#F97316'
+      },
+      {
+        name:'green',
+        hexCode:'#22C55E'
+      },
+      
+    ],
     images:[
       {
         id:1,
@@ -62,6 +94,21 @@ const data = [
     star:5,
     review:15,
     sold:2050,
+    colors:[
+      {
+        name:'black',
+        hexCode:'#0A0A0A'
+      },
+      {
+        name:'orange',
+        hexCode:'#F97316'
+      },
+      {
+        name:'green',
+        hexCode:'#22C55E'
+      },
+      
+    ],
     images:[
       {
         id:1,
@@ -88,6 +135,21 @@ const data = [
     star:4,
     review:150,
     sold:2050,
+    colors:[
+      {
+        name:'black',
+        hexCode:'#0A0A0A'
+      },
+      {
+        name:'orange',
+        hexCode:'#F97316'
+      },
+      {
+        name:'green',
+        hexCode:'#22C55E'
+      },
+      
+    ],
     images:[
       {
         id:1,
@@ -115,6 +177,21 @@ const data = [
     star:1.5,
     review:150,
     sold:2050,
+    colors:[
+      {
+        name:'black',
+        hexCode:'#0A0A0A'
+      },
+      {
+        name:'orange',
+        hexCode:'#F97316'
+      },
+      {
+        name:'green',
+        hexCode:'#22C55E'
+      },
+      
+    ],
     images:[
       {
         id:1,
@@ -141,6 +218,21 @@ const data = [
     star:3.5,
     review:150,
     sold:2050,
+    colors:[
+      {
+        name:'black',
+        hexCode:'#0A0A0A'
+      },
+      {
+        name:'orange',
+        hexCode:'#F97316'
+      },
+      {
+        name:'green',
+        hexCode:'#22C55E'
+      },
+      
+    ],
     images:[
       {
         id:1,

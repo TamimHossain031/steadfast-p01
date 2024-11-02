@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import mainProduct from "../../assets/hero/heroLeft.png";
 import sideProduct from "../../assets/hero/heroRight.png";
 import scroll from "../../assets/hero/scrollDown.svg";
 import vector1 from "../../assets/hero/vector1.svg";
 import vector2 from "../../assets/hero/vector2.svg";
 import Button from "../Button";
-import {Link} from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="hero">

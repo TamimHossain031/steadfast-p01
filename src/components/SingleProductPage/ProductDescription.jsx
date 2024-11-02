@@ -1,8 +1,26 @@
+import Colors from "./Color";
 import Rating from "./Rating";
-
+import {useState} from 'react';
 export default function ProductDescription(description) {
-  const { title, stock, star, review, sold, oldPrice, newPrice } = description;
+  const { title, stock, star, review, sold, oldPrice, newPrice,colors } = description;
 
+  const [productData,setProductData]= useState({
+    title,
+    color:colors[0].hexCode,
+    quantity:0
+  })
+
+  const updateProduct = (data)=>{
+    setProductData({
+        ...productData,
+        [data.type] : data.payload
+    })
+
+    
+  }
+
+  
+  console.log(productData);
   
   return (
     <div className="flex-1">
@@ -18,12 +36,12 @@ export default function ProductDescription(description) {
       </span>
       {/* rating */}
       <div className="flex gap-x-[10px] mt-4  *:text-neutral-400 divide-x-[1px] divide-neutral-400 ">
-        <span className="flex gap-[10px] ">
+        <span className="flex gap-[10px] leading-[100%]">
           <Rating className={`flex`} star={star} />
           {star}
         </span>
-        <span className="pl-[10px]">{review} Review</span>
-        <span className="pl-[10px]">{sold} Sold</span>
+        <span className="pl-[10px] leading-[100%]">{review} Review</span>
+        <span className="pl-[10px] leading-[100%]">{sold} Sold</span>
       </div>
 
       {/* pricing */}
@@ -36,8 +54,11 @@ export default function ProductDescription(description) {
         </del>
         <span className="font-medium text-[18px] leading-[156%] text-green">
           {oldPrice - newPrice}%off
-        </span>
+        </span>        
       </div>
+
+      {/* color */}
+      <Colors color={colors} setColor={productData.color} setData={updateProduct}/>
     </div>
   );
 }

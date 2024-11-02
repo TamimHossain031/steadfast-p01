@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +8,17 @@
 @layer base {
   p {
     @apply text-[16px] font-normal leading-[150%] text-primary;
+  }
+}
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 @layer components {
@@ -31,7 +43,7 @@
     @apply bg-bgHero mt-[0px] relative;
   }
   .hero-title {
-    @apply text-[150px] font-light font2 leading-[200%];
+    @apply text-[150px] font-light leading-[200%] font-fraunces;
   }
   .hero-content {
     @apply text-[16px] font-normal leading-[150%] text-primary max-w-[526px] w-full;
@@ -59,10 +71,10 @@
 
   /* title */
   .title {
-    @apply text-[40px] font-semibold text-white leading-[120%] font2;
+    @apply text-[40px] font-semibold text-white leading-[120%] font-fraunces;
   }
   .title2 {
-    @apply text-[32px] font-normal leading-[125%] text-cardTitle font2;
+    @apply text-[32px] font-normal leading-[125%] text-cardTitle font-fraunces;
   }
   .p-title {
     @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize;
@@ -81,11 +93,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   font-style: normal;
 }
 body {
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 a {
   color: #fff;
@@ -104,9 +116,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.font2 {
-  font-family: Fraunces;
-}
+
 .hover-effect1:hover > span {
   transform: translateX(10px);
 }
@@ -130,26 +140,13 @@ a {
 .swiper-horizontal
   > .swiper-pagination-bullets
   .swiper-pagination-bullet-active {
-  width: 25px;
-  height: 25px;
+ 
   border-radius: 50%;
-  background: transparent;
-  border: 1.5px solid #c09381;
-  position: relative;
-  padding: 0;
-}
-.swiper-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet-active::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 11px;
-  height: 11px;
-  background: #c09381;
-  border-radius: 50%;
+  background: #c09381; 
+  outline:1px solid #c09381;
+  outline-offset:4px;
+
+ 
 }
 
 .afterBorder {

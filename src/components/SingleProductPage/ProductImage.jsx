@@ -1,15 +1,11 @@
 /* eslint-disable react/prop-types */
-import { useState,useEffect } from "react";
+import { useState } from "react";
 export default function ProductImage({ images }) {
   const [active, setActive] = useState(0);
-
-  useEffect(()=>{
-    setActive(0)
-  },[images])
-
+  
   return (
     <div className="flex gap-6">
-      <div className="flex flex-col gap-[15px]">
+      <div className="flex max-h-[576px] overflow-y-auto overflow-x-hidden flex-col gap-[15px] no-scrollbar">
         {images.length &&
           images.map((single, index) => (
             <figure
@@ -27,7 +23,7 @@ export default function ProductImage({ images }) {
             </figure>
           ))}
       </div>
-      <figure className=' w-[506px] h-[576px]'>
+      <figure className=" w-[506px] h-[576px]">
         <img
           className="rounded-[10px] w-full h-full object-cover object-center"
           src={images[active].url}
