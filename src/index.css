@@ -86,6 +86,9 @@
   .btn-group{
     @apply flex gap-5 *:w-[180px] *:h-[56px] *:rounded-[4px] *:flex *:justify-center *:items-center *:bg-accent1 *:gap-2 capitalize
   }
+  .price-btnGroup{
+    @apply flex *:h-[40px] justify-between gap-5 *:border-[1px] *:flex-1 *:border-gray *:rounded-[4px] *:flex *:justify-center *:items-center *:font-normal
+  }
 
   /* footer */
   .footer-link {
@@ -93,6 +96,7 @@
   }
 }
 
+/* reset */
 * {
   padding: 0;
   margin: 0;
@@ -107,6 +111,8 @@ a {
   color: #fff;
   display: inline-block;
 }
+
+
 .container {
   max-width: 1300px;
   width: 100%;
@@ -127,6 +133,8 @@ a {
 .customerSwiper {
   min-height: 380px;
 }
+
+/* swiper slider */
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   display: flex;
   justify-content: center;
@@ -181,6 +189,8 @@ a {
   postiion: relative;
 }
 
+/* tooltip */
+
 #tooltip-right {
   position: absolute;
   transform: translate(66px, 6px);
@@ -216,6 +226,8 @@ a {
   opacity: 1;
 }
 
+/* header background change on scroll */
+
 .bgChange {
   postiion: relative;
   transition: all 0.5s ease;
@@ -232,6 +244,9 @@ a {
   backdrop-filter: blur(10px);
   transition: all 0.5s ease;
 }
+
+/* 
+button hover effect */
 .cart-hover:hover .bounceNew { animation: bounceNew 1s infinite; }
 
 @keyframes bounceNew {
@@ -245,3 +260,32 @@ a {
     animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 }
+
+/* Yellow Range Slider */
+#range-slider-yellow {
+  background: #D4D4D4;
+  height:5px;
+  margin-bottom:27px;
+}
+
+#range-slider-yellow .range-slider__range {
+  background: #D7AA38;
+  height:5px;
+  transition: height 0.3s;
+}
+
+#range-slider-yellow .range-slider__thumb {
+  width:16px;
+  height:16px;
+  cursor:grab;
+  background: #D7AA38;
+  transition: transform 0.3s;
+}
+#range-slider-yellow .range-slider__thumb:hover{
+  transform: translate(-50%, -50%) scale(1.25);
+}
+
+#range-slider-yellow .range-slider__thumb[data-active] {
+  transform: translate(-50%, -50%) scale(1.25);
+}
+

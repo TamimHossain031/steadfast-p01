@@ -1,0 +1,53 @@
+const color = [
+    {
+        name:'red',
+        hexCode:'#EF4444'
+    },
+    {
+        name:'blue',
+        hexCode:'#3B82F6'
+    },
+    {
+        name:'yellow',
+        hexCode:'#EAB308'
+    },
+    {
+        name:'purple',
+        hexCode:'#A855F7'
+    },
+    {
+        name:'slate',
+        hexCode:'#64748B'
+    },
+    {
+        name:'orage',
+        hexCode:'#F97316'
+    },
+    {
+        name:'lime',
+        hexCode:'#84CC16'
+    },
+    {
+        name:'pink',
+        hexCode:'#EC4899'
+    },
+    {
+        name:'green',
+        hexCode:'#22C55E'
+    },
+    {
+        name:'gray',
+        hexCode:'#6B7280'
+    },
+    {
+        name:'rose',
+        hexCode:'#F43F5E'
+    },
+    {
+        name:'emerald',
+        hexCode:'#10B981'
+    }
+    
+]
+
+export {color};
