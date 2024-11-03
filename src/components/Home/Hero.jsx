@@ -36,7 +36,7 @@ export default function Hero() {
               vulputate libero et velit interdum, ac aliquet odio mattis.taciti
               sociosqu ad litora torquent per.
             </p>
-            <Link to='/shop'>
+            <Link to="/shop">
               <Button className="btn-primary bg-accent1"></Button>
             </Link>
           </div>

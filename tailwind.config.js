@@ -31,7 +31,8 @@ export default {
         fBtnBorder:'#9D9D9D',
         fBtnBg:'#F8F8F8',
         quantityColor:'#4b4b4b',
-        quantityBtn:'#9A9A9A'
+        quantityBtn:'#9A9A9A',
+        totalColor:'#CAC9C9'
       },
     },
     

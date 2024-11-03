@@ -1,10 +1,10 @@
 import { useState } from "react";
-import AddQuantity from "../AddQuantity";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
+import AddQuantity from "../AddQuantity";
 import Colors from "./Color";
 import Rating from "./Rating";
-import {Link} from 'react-router-dom';
 export default function ProductDescription(description) {
   const { title, stock, star, review, sold, oldPrice, newPrice, colors } =
     description;
@@ -74,11 +74,15 @@ export default function ProductDescription(description) {
       <AddQuantity getData={productData} setData={updateProduct} />
 
       {/* buy link */}
-      <div className='btn-group mt-[59px] '>
-      <Link className='cart-hover'><HiOutlineShoppingBag className='text-[24px] bounceNew'/> buy now</Link>
-      <Link className='bg-accent2 cart-hover'><MdOutlineAddShoppingCart className='text-[24px] bounceNew'/> add to cart</Link>
+      <div className="btn-group mt-[59px] ">
+        <Link to='/checkout' className="cart-hover">
+          <HiOutlineShoppingBag className="text-[24px] bounceNew" /> buy now
+        </Link>
+        <Link className="bg-accent2 cart-hover">
+          <MdOutlineAddShoppingCart className="text-[24px] bounceNew" /> add to
+          cart
+        </Link>
       </div>
-     
     </div>
   );
 }
