@@ -16,7 +16,7 @@ export default function SingleColor({ color, check, handleColor }) {
       >
         {check && <IoCheckmarkSharp />}
       </div>
-      <p className="text-white mt-1 capitalize">{"red"}</p>
+      <p className="text-white mt-1 capitalize text-[14px] font-light">{color.name}</p>
     </div>
   );
 }

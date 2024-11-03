@@ -4,6 +4,7 @@ import DiscountedProduct from "../components/DiscountedProduct";
 import ProductDescription from "../components/SingleProductPage/ProductDescription";
 import ProductImage from "../components/SingleProductPage/ProductImage";
 import { data } from "../Db/products";
+import ProductInfo from "../components/SingleProductPage/ProductInfo";
 export default function SingleProductPage() {
   const { id } = useParams();
   let [product] = data.filter((single) => single.title == id);
@@ -28,6 +29,7 @@ export default function SingleProductPage() {
           <ProductDescription {...description} />
         </div>
       </div>
+      <ProductInfo/>
       <DiscountedProduct />
     </section>
   );
