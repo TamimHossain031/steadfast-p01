@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import phone from "../../assets/customer/Call.svg";
 import location from "../../assets/customer/location.svg";
 import user from "../../assets/customer/name.svg";
 import Field from "./Field";
 export default function CustomerInfo() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -12,6 +14,7 @@ export default function CustomerInfo() {
   const getData = ["name", "phone", "address", "charge", "method"];
 
   const setData = (data) => {
+    navigate('/login');
     console.log(data);
   };
   return (

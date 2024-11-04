@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import Field from "../Checkout/Field";
-export default function Login({onLogin}) {
+export default function Login({ onLogin }) {
   const {
     register,
     handleSubmit,
@@ -12,7 +12,7 @@ export default function Login({onLogin}) {
     console.log(data);
   };
   return (
-    <div className={`text-center`}>
+    <div>
       <form onSubmit={handleSubmit(setData)}>
         <Field error={errors.phone}>
           <input
@@ -41,11 +41,16 @@ export default function Login({onLogin}) {
           value="Login"
         />
       </form>
-      <Link className="text-red text-center mt-[26px]">Forgot password?</Link>
+      <div className='text-center'>
+        <Link className="text-red text-center mt-[26px]">Forgot password?</Link>
+      </div>
       <hr className="text-darkGray mt-[22px] mb-[15px]" />
-      <p className="text-neutral-200 pb-6">
-        New customer? 
-        <button className="text-accent1 hover:underline mx-1" onClick={()=>onLogin(false)}>
+      <p className="text-neutral-200 pb-6 text-center">
+        New customer?
+        <button
+          className="text-accent1 hover:underline mx-1"
+          onClick={() => onLogin(false)}
+        >
           register
         </button>
         here
