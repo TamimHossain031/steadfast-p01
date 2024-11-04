@@ -1,35 +1,34 @@
-/* eslint-disable no-constant-binary-expression */
-import { useState,useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import search from "../assets/header/Search.svg";
 import cart from "../assets/header/cart.svg";
 import logo from "../assets/header/logo.svg";
 import wishlist from "../assets/header/wish.svg";
-import Nav from "./Nav";
 import addHeaderBg from "./Helpers/addHeaderBg";
-import {useLocation} from 'react-router-dom';
+import Nav from "./Nav";
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
   const [navShow, setNavShow] = useState(true);
 
   const page = useLocation().pathname.slice(1);
-  const setHeaderBg = page == 'checkout' || 'signup' || 'login' 
-  
+  const setHeaderBg = (page == "checkout" || page == "login");
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const toggleNav = () => setNavShow(!navShow);
 
   useEffect(() => {
-   //add header Bg
-   addHeaderBg();
+    //add header Bg
+    addHeaderBg();
   }, []);
 
   return (
     <header
-      className={`z-[1000] max-w-[1440px] w-full h-[109px] fixed top-0 pb-5 ${setHeaderBg && 'bg-bgHero'}`}
+      className={`z-[1000] max-w-[1440px] w-full h-[109px] fixed top-0 pb-5 ${
+        setHeaderBg && "bg-bgHero"
+      }`}
       id="header"
     >
       <div className="header-wrap container">
