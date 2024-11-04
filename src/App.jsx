@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ScrollToTop from "./components/Helpers/ScrollToTop";
@@ -11,9 +12,11 @@ import Product from "./pages/Product";
 import Shop from "./pages/Shop";
 import SingleProductPage from "./pages/SingleProductPage";
 import UserLogin from "./pages/UserLogin";
+import CursorMove from "./components/Helpers/CursorMove";
 function App() {
   return (
     <div className="bg-bgDark pb-[23px]">
+      <CursorMove/>
       <Router>
         <Header />
         <ScrollToTop />

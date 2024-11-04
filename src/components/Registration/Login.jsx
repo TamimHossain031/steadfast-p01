@@ -44,8 +44,8 @@ export default function Login({onLogin}) {
       <Link className="text-red text-center mt-[26px]">Forgot password?</Link>
       <hr className="text-darkGray mt-[22px] mb-[15px]" />
       <p className="text-neutral-200 pb-6">
-        New customer?{" "}
-        <button className="text-accent1 hover:underline" onClick={()=>onLogin(false)}>
+        New customer? 
+        <button className="text-accent1 hover:underline mx-1" onClick={()=>onLogin(false)}>
           register
         </button>
         here

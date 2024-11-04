@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`z-[1000] max-w-[1440px] w-full h-[109px] fixed top-0 pb-5 ${
+      className={`z-[100] max-w-[1440px] w-full h-[109px] fixed top-0 pb-5 ${
         setHeaderBg && "bg-bgHero"
       }`}
       id="header"
@@ -47,10 +47,11 @@ export default function Header() {
               <img src={search} alt="search" />
             </button>
             <input
-              className={`transition-all absolute top-[30%] right-[100%] bg- ${
-                showSearch ? "visible" : "hidden"
+              className={`px-2 outline-none bg-transparent border rounded border-accent1 h-[40px] absolute top-0 right-[110%] text-white  ${
+                showSearch ? "visible " : " hidden"
               }`}
               type="text"
+              placeholder='Search'
             />
           </div>
           <button>

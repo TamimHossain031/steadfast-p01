@@ -18,9 +18,9 @@ export default function Field({ children, error, label, htmlFor, hasBtn }) {
           {children}
         </div>
         {hasBtn && (
-          <button className="min-w-[127px] h-[64px] bg-cardTitle rounded text-accent1">
+          <span className="min-w-[127px] h-[64px] bg-cardTitle rounded text-accent1 grid place-content-center cursor-pointer ">
             Send
-          </button>
+          </span>
         )}
       </div>
       {error && <small className="text-red">{error?.message}</small>}

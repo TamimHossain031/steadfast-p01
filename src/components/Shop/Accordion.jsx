@@ -42,8 +42,6 @@ export default function Accordion() {
     setActive((i) => !i);
   };
 
-  
-
   return (
     <div
       className={`w-full group ${

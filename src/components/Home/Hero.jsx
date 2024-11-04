@@ -23,8 +23,8 @@ export default function Hero() {
         </figure>
         <div className="absolute left-1/2 bottom-[32px] uppercase text-white text-center">
           <p>scroll down</p>
-          <button className="mt-[20px]">
-            <img src={scroll} alt="" />
+          <button className="mt-[20px] animate-bounce">
+            <a href="#service"> <img src={scroll} alt="" /></a>
           </button>
         </div>
         {/* content */}

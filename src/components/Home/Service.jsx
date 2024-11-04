@@ -4,7 +4,7 @@ import savings from "../../assets/services/save-money.svg";
 import shipping from "../../assets/services/shipped (1).svg";
 export default function Service() {
   return (
-    <section className="service container mt-[85px] mb-[98px]">
+    <section className="grid grid-cols-4 container mt-[85px] mb-[98px]" id='service'>
       <div className="service-card pl-0">
         <span>
           <img src={shipping} alt="" />

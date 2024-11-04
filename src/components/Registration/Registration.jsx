@@ -5,7 +5,8 @@ export default function Registration() {
     let doCross = document.querySelector('#cross');
     const doCrossFunc = (e)=>{
         e.preventDefault();
-        console.log(doCross.value.trim())
+        doCross.value = '';
+        doCross.focus()
     }
   const {
     register,
@@ -51,7 +52,7 @@ export default function Registration() {
               placeholder="OTP"
               id="cross"
             />
-            <button className='absolute w-6 h-6 right-4 top-1/3 text-[#A0A49D]' onClick={doCrossFunc}><RxCross1 /></button>
+            <span className='absolute w-6 h-6 right-4 top-1/3 text-[#A0A49D] grid place-content-center cursor-pointer' onClick={doCrossFunc}><RxCross1 /></span>
           </div>
         </Field>
         <Field error={errors.password}>

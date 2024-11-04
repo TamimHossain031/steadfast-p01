@@ -11,12 +11,12 @@ export default function SingleProduct({ data }) {
   const path = location.pathname.slice(1);
 
   return (
-    <Link to={`/singleProduct/${title}`} preventScrollReset={true}>
+    <Link to={`/singleProduct/${title}`}>
       <div
         className={`max-h-[548px] relative text-white text-center cursor-pointer group overflow-hidden`}
       >
         <span
-          className={`absolute top-[14px] left-[14px]   uppercase rounded-[4px] ${
+          className={`absolute top-[14px] left-[14px]  z-10 uppercase rounded-[4px] ${
             label == "new" ? "bg-blue" : "bg-red"
           } ${
             path == "shop"
@@ -26,10 +26,10 @@ export default function SingleProduct({ data }) {
         >
           {label}
         </span>
-        <figure className="">
-          <img className="max-h-[472px]" src={img} alt={img} />
+        <div className="relative">
+          <figure className='max-h-[472px] overflow-hidden'><img className=" group-hover:scale-[1.1] group-hover:rotate-[5deg] transition-transform duration-300" src={img} alt={img} /></figure>
           <figcaption className="p-title pt-4">{title}</figcaption>
-        </figure>
+        </div>
 
         <h2 className="text-[20px] font-medium leading-[140%] mt-1">
           {newPrice}${" "}
