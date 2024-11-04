@@ -6,7 +6,8 @@ export default {
       fontFamily:{
         poppins:["Poppins", 'sans-serif'],
         fraunces:["Fraunces", 'serif'],
-        workSans:["Work Sans", 'sans-serif']
+        workSans:["Work Sans", 'sans-serif'],
+        onest:["Onest", 'sans-serif']
       },
       colors: {
         white:'#ffffff',

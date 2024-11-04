@@ -27,7 +27,11 @@ export default function Checkout() {
       } else if (data.payload > stock) return false;
     }
 
-    const filtered = cart.filter((single) => single.title == data.title);
+    const filtered = cart.map((single) =>
+      single.title == data.title
+        ? { ...single, quantity: data.payload }
+        : single
+    );
   };
 
   return (
@@ -71,11 +75,11 @@ export default function Checkout() {
                   </div>
                   <AddQuantity getData={single} setData={updateProduct} />
                 </div>
-              ))}              
+              ))}
           </div>
-          <Total/>
+          <Total />
         </div>
-       <CustomerInfo/>
+        <CustomerInfo />
       </div>
     </section>
   );
