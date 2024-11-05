@@ -1,10 +1,13 @@
+/* eslint-disable react/display-name */
 import support from "../../assets/services/headphones.svg";
 import sequre from "../../assets/services/lock.svg";
 import savings from "../../assets/services/save-money.svg";
 import shipping from "../../assets/services/shipped (1).svg";
-export default function Service() {
+import { forwardRef } from 'react';
+const Service = forwardRef((props,ref) =>{
   return (
-    <section className="container py-10 xl:pt-[85px] xl:pb-[98px] grid  gap-y-6 sm:grid-cols-2 lg:grid-cols-4 sm:*:border-r-[1.5px]  *:border-darkGray  *:flex   sm:*:justify-center  ">
+    //service section //
+    <section ref={ref} className="container py-10 xl:pt-[85px] xl:pb-[98px] grid  gap-y-6 sm:grid-cols-2 lg:grid-cols-4 sm:*:border-r-[1.5px]  *:border-darkGray  *:flex   sm:*:justify-center  ">
       <div className=''>
         <div className="service-card">
           <figure>
@@ -52,4 +55,6 @@ export default function Service() {
       </div>
     </section>
   );
-}
+})
+
+export default Service;

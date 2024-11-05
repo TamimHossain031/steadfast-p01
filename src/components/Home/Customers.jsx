@@ -9,7 +9,9 @@ import { Pagination } from "swiper/modules";
 import SingleCustomer from "../SingleCustomer";
 
 export default function Customers() {
+
   return (
+    // Our Happy Customer Section
     <section className="container text-center">
       <h2 className="title mb-4">Our Happy Customers</h2>
       <p className='mb-[95px]'>

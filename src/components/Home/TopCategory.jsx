@@ -31,6 +31,7 @@ export default function TopCategory() {
 
   const { isLast, isFirst } = slideBegOrNot;
   return (
+    // top category section //
     <section className="container mb-[50px] sm:mb-[135px]">
       <div className="align-middle sm:mb-[48px] flex justify-between">
         <h2 className="title">Top Categories</h2>
@@ -71,6 +72,7 @@ export default function TopCategory() {
         {data.length &&
           data.map((slide, index) => (
             <SwiperSlide key={index}>
+              {/* single category card */}
               <SingleCategory data={slide} />
             </SwiperSlide>
           ))}

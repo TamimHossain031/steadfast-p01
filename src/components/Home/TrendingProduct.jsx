@@ -3,6 +3,7 @@ import trend from "../../assets/trend/trend.png";
 import Button from "../Button";
 export default function TrendingProduct() {
   return (
+    // Trending wallet collection //
     <section className="bg-bgDark2 mb-[100px]">
       <div className="container">
         <div className="flex flex-col md:flex-row align-bottom gap-[30px]">

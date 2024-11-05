@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import mainProduct from "../../assets/hero/heroLeft.png";
 import sideProduct from "../../assets/hero/heroRight.png";
@@ -5,7 +6,8 @@ import scroll from "../../assets/hero/scrollDown.svg";
 import vector1 from "../../assets/hero/vector1.svg";
 import vector2 from "../../assets/hero/vector2.svg";
 import Button from "../Button";
-export default function Hero() {
+export default function Hero({scrollToNextSection}) {
+ 
   return (
     // hero section //
     <section className="hero">
@@ -24,10 +26,11 @@ export default function Hero() {
         </figure>
         <div className="absolute left-1/2 bottom-[32px] uppercase text-white text-center">
           <p>scroll down</p>
-          <button className="mt-[20px] animate-bounce">
-            <a href="#service"> <img src={scroll} alt="" /></a>
+          <button className="mt-[20px] animate-bounce" onClick={scrollToNextSection}>
+             <img src={scroll} alt="" />
           </button>
         </div>
+
         {/* content */}
         <div className="absolute top-[9%] left-[35%] text-white">
           <h1 className="hero-title">Fold Wallet</h1>

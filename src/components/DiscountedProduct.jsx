@@ -32,6 +32,7 @@ export default function DiscountedProduct() {
 
   const { isLast, isFirst } = slideBegOrNot;
   return (
+    // Recently discounted product
     <section className="container mt-[100px]">
       <div className="mb-6 md:mb-[48px] flex justify-between items-end">
         <h2 className="title">Recently Discounted</h2>
