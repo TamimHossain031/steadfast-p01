@@ -42,7 +42,7 @@ export default function Checkout() {
       <p className="font-normal text-neutral-100 text-[18px] leading-[156%] mt-[18px] text-center">
         Please fill up below information to confirm your order
       </p>
-      <div className="flex gap-x-[109px] mt-12 min-h-5">
+      <div className="flex flex-col lg:flex-row lg:gap-x-[109px] gap-y-10 mt-12 min-h-5">
         <div className=" flex-1">
           <h3 className="text-[24px] font-medium text-neutral-50 mb-4">
             Customer Information
@@ -52,7 +52,7 @@ export default function Checkout() {
               cart.map((single, i) => (
                 <div
                   key={i}
-                  className=" w-full flex justify-between items-center pb-4"
+                  className=" w-full flex  justify-between gap-4  items-center pb-4"
                 >
                   <figure className="flex gap-5 items-center max-w-[356px] w-full">
                     <img

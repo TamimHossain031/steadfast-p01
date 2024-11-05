@@ -15,21 +15,25 @@ export default function Footer() {
         page == "checkout" ? "mt-[80px]" : "mt-[165px]"
       } container `}
     >
-      <div className="border-t-[1px] border-darkGray pt-10 pl-[25px] pr-[25px] flex justify-between">
-        <div className="*:text-cardTitle ">
-          <figure className="pb-[25px]">
-            <img src={logo} alt="logo" />
+      <div className="border-t-[1px] border-darkGray pt-10 md:pl-[25px] md:pr-[25px] flex flex-col lg:flex-row lg:justify-between">
+        <div className="*:text-cardTitle *:text-[9px] lg:*:text-[16px] flex flex-col items-center lg:items-start">
+          <figure className="pb-[25px] ">
+            <img className="logo" src={logo} alt="logo" />
           </figure>
-          <p>
-            House# 44 , Rd No. 2/A, Dhanmondi <br></br> Zigatola Bus Stand ,
-            Dhaka, 1209
-          </p>
-          <p className="pt-[10px]">E-mail: hatbazar@gmail.com</p>
-          <p>Hotline: 01811-477058</p>
+          <div className='flex gap-6 lg:flex-col lg:gap-0 *:text-[10px] md:*:text-[16px]'>
+            <p>
+              House# 44 , Rd No. 2/A, Dhanmondi <br></br> Zigatola Bus Stand ,
+              Dhaka, 1209
+            </p>
+            <div className='*:text-[10px] md:*:text-[16px]'>
+              <p className="lg:pt-[10px]">E-mail: hatbazar@gmail.com</p>
+              <p>Hotline: 01811-477058</p>
+            </div>
+          </div>
         </div>
-        <div className="*:text-cardTitle">
-          <h2 className="f-title pb-6">Company</h2>
-          <ul className="*:mb-3">
+        <div className="*:text-cardTitle mt-6 lg:mt-0">
+          <h2 className="f-title lg:pb-6">Company</h2>
+          <ul className="*:mb-3 flex justify-center lg:flex-col  gap-2 text-[9px] lg:text-[16px]">
             <li>
               <Link>About Us</Link>
             </li>
@@ -45,8 +49,8 @@ export default function Footer() {
           </ul>
         </div>
         <div className="*:text-cardTitle">
-          <h2 className="f-title pb-6">Support</h2>
-          <ul className="*:mb-3">
+          <h2 className="f-title lg:pb-6">Support</h2>
+          <ul className="*:mb-3 flex justify-center gap-2 text-[9px] lg:text-[16px] lg:flex-col">
             <li>
               <Link>FAQ&apos;s</Link>
             </li>
@@ -61,8 +65,8 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="*:text-cardTitle  pl-[25px]">
-          <h2 className="f-title pb-6">Find Us</h2>
+        <div className="*:text-cardTitle  lg:pl-[25px]">
+          <h2 className="f-title lg:pb-6">Find Us</h2>
           <div className="footer-link">
             <Link>
               <FaFacebookF />

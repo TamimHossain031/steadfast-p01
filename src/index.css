@@ -202,6 +202,10 @@ button hover effect */
   }
 }
 @layer components {
+  /* logo size */
+  .logo{
+    @apply w-[100px] lg:w-fit
+  }
   /* navigation */
   .navigation {
     @apply flex gap-[32px] flex-col text-center justify-center absolute md:static  top-0 bg-bgDark2 w-dvw h-dvh md:w-fit md:h-fit md:flex-row md:bg-transparent z-10;
@@ -258,7 +262,7 @@ button hover effect */
     @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize;
   }
   .f-title {
-    @apply text-nowrap sm:text-[20px] font-medium;
+    @apply text-center lg:text-left text-nowrap sm:text-[20px] font-medium;
   }
 
   /* btn group */
@@ -271,7 +275,7 @@ button hover effect */
 
   /* footer */
   .footer-link {
-    @apply mt-1 *:w-[40px] *:h-[40px] flex gap-[10px] *:border *:border-fBtnBorder *:bg-fBtnBg *:text-fBtnBorder *:grid *:place-content-center *:rounded-full *:transition-colors;
+    @apply mt-1 *:w-[40px] *:h-[40px] flex justify-center gap-[10px] *:border *:border-fBtnBorder *:bg-fBtnBg *:text-fBtnBorder *:grid *:place-content-center *:rounded-full *:transition-colors;
   }
 }
 

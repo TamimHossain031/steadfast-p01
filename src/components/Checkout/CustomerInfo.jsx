@@ -14,15 +14,15 @@ export default function CustomerInfo() {
   const getData = ["name", "phone", "address", "charge", "method"];
 
   const setData = (data) => {
-    navigate('/login');
+    navigate("/login");
     console.log(data);
   };
   return (
-    <div className="max-w-[411px] w-full">
-        <h3 className="text-[24px] font-medium text-neutral-50 mb-4">
-            Customer Information
-          </h3>
-      <form  onSubmit={handleSubmit(setData)}>
+    <div className="lg:max-w-[411px] w-full ">
+      <h3 className="text-[24px] font-medium text-neutral-50 mb-4">
+        Customer Information
+      </h3>
+      <form onSubmit={handleSubmit(setData)}>
         {/* Name input */}
         <Field label={getData[0]} htmlFor={getData[0]} error={errors.name}>
           <div className="w-full h-[48px] rounded bg-zinc-50 p-3 flex mt-2">
@@ -96,7 +96,10 @@ export default function CustomerInfo() {
                 value="60"
                 checked={true}
               />
-              <label htmlFor={"inside"} className="text-white capitalize font-normal font-onest">
+              <label
+                htmlFor={"inside"}
+                className="text-white capitalize font-normal font-onest"
+              >
                 inside Dhaka tk.60
               </label>
             </div>
@@ -109,7 +112,10 @@ export default function CustomerInfo() {
                 id={"outside"}
                 value="120"
               />
-              <label htmlFor={"outside"} className="text-white capitalize font-normal font-onest">
+              <label
+                htmlFor={"outside"}
+                className="text-white capitalize font-normal font-onest"
+              >
                 outside Dhaka tk.120
               </label>
             </div>

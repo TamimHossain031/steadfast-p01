@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`z-[1000] w-full h-[109px] fixed top-0 pb-5 ${
+      className={`z-[1000] max-w-[1440px] w-full h-[109px] fixed top-0 pb-5 ${
         setHeaderBg && "bg-bgHero"
       }`}
       id="header"
@@ -34,7 +34,7 @@ export default function Header() {
       <div className="header-wrap container">
         {/* //logo */}
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img className='logo' src={logo} alt="logo" />
         </Link>
 
         {/* navigation */}
