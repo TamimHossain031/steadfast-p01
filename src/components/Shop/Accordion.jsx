@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import SubCategory from "./SubCategory";
 export default function Accordion() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
   const cat = [
     {
       name: "mans wallet",

@@ -4,7 +4,7 @@ export default function SingleCustomer({ data }) {
   const { img, description, star, name, designation } = data;
   
   return (
-    <div className="h-[276px] grid place-content-center place-items-center afterBorder">
+    <div className="min-h-[276px] grid place-content-center place-items-center afterBorder">
       <figure className="w-[99px] h-[99px] rounded-full  mb-6">
         <img
           className="w-full h-full rounded-full object-cover object-top"

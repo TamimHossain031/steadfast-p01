@@ -1,7 +1,7 @@
 export default function ProductInfo() {
   return (
-    <div className='text-primary max-w-[712px] mt-[88px] pb-[27px] ml-[54px]'>
-      <div className='flex gap-[70px] mb-6 *:font-medium *:text-[20px] *:leading-[140%] *:uppercase'>
+    <div className='text-primary max-w-[712px] mt-[88px] pb-[27px] md:ml-[54px]'>
+      <div className='flex gap-4 sm:gap-[70px] mb-6 *:font-medium *:text-[14px] md:*:text-[20px] *:leading-[140%] *:uppercase'>
         <button className='text-white'>product description</button>
         <button>product details</button>
         <button>review</button>

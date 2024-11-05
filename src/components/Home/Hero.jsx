@@ -7,13 +7,14 @@ import vector2 from "../../assets/hero/vector2.svg";
 import Button from "../Button";
 export default function Hero() {
   return (
+    // hero section //
     <section className="hero">
-      <div className="container relative w-dvw min-h-[960px]">
-        <figure className="absolute bottom-0">
-          <img src={mainProduct} alt="" />
+      <div className="container relative w-dvw min-h-[800px] xl:min-h-[960px]">
+        <figure className="absolute bottom-0 ">
+          <img className='w-[70%] xl:w-[100%]' src={mainProduct} alt="" />
         </figure>
-        <figure className="absolute right-0 bottom-0 pt-[20px] bg-bgSideProduct translate-x-[-20px]">
-          <img className="z-2 translate-x-[20px]" src={sideProduct} alt="" />
+        <figure className="absolute  right-0 bottom-0 pt-[20px] bg-bgSideProduct translate-x-[-40px]">
+          <img className="z-2 w-[80%] xl:w-[100%] translate-x-[20px]" src={sideProduct} alt="" />
         </figure>
         <figure className="absolute bottom-[202px] right-[450px]">
           <img src={vector1} alt="" />
@@ -30,7 +31,7 @@ export default function Hero() {
         {/* content */}
         <div className="absolute top-[9%] left-[35%] text-white">
           <h1 className="hero-title">Fold Wallet</h1>
-          <div className="ml-[25%]">
+          <div className="ml-[30%] xl:ml-[25%]">
             <p className="hero-content">
               Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.taciti

@@ -5,8 +5,8 @@ export default function TrendingProduct() {
   return (
     <section className="bg-bgDark2 mb-[100px]">
       <div className="container">
-        <div className="flex align-bottom gap-[30px]">
-          <div className="mt-[66px] ml-[40px] mb-[86px]">
+        <div className="flex flex-col md:flex-row align-bottom gap-[30px]">
+          <div className="mt-9 md:mt-[66px] md:ml-[40px] md:mb-[86px] ">
             <h3 className="title2">Trending Wallet Collection</h3>
             <h2 className="text-[64px] font-semibold font-fraunces leading-[125%] text-white mt-[35px] mb-[21px]">
               UPTO 50% OFF
@@ -15,7 +15,7 @@ export default function TrendingProduct() {
               Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
-            <Link to='/shop'>
+            <Link to="/shop">
               <Button className="btn-primary bg-accent1 text-white" />
             </Link>
           </div>

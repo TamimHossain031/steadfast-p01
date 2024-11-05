@@ -27,7 +27,13 @@ export default function SingleProduct({ data }) {
           {label}
         </span>
         <div className="relative">
-          <figure className='max-h-[472px] overflow-hidden'><img className=" group-hover:scale-[1.1] group-hover:rotate-[5deg] transition-transform duration-300" src={img} alt={img} /></figure>
+          <figure className="max-h-[472px] overflow-hidden">
+            <img
+              className="w-full group-hover:scale-[1.1] group-hover:rotate-[5deg] transition-transform duration-300"
+              src={img}
+              alt={img}
+            />
+          </figure>
           <figcaption className="p-title pt-4">{title}</figcaption>
         </div>
 

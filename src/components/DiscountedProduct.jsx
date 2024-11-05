@@ -33,10 +33,12 @@ export default function DiscountedProduct() {
   const { isLast, isFirst } = slideBegOrNot;
   return (
     <section className="container mt-[100px]">
-      <div className="align-middle mb-[48px] flex justify-between">
-        <h2 className="title ">Recently Discounted</h2>
-        <div className="flex gap-4 items-center">
-          <Link className="f-title mr-6 text-primary">View All</Link>
+      <div className="mb-6 md:mb-[48px] flex justify-between items-end">
+        <h2 className="title">Recently Discounted</h2>
+        <div className="flex flex-col md:flex-row gap-4 items-end">
+          <Link className="f-title md:mr-6 text-primary">View All</Link>
+          
+          <div className='flex gap-4'>
           <button
             className={`${
               isFirst ? "disable bg-gray" : "bg-neutral-100"
@@ -54,6 +56,7 @@ export default function DiscountedProduct() {
             {" "}
             <GoChevronRight size={20} />
           </button>
+            </div>
         </div>
       </div>
       <Swiper
@@ -68,7 +71,7 @@ export default function DiscountedProduct() {
           0: {
             slidesPerView: 1,
           },
-          400: {
+          640: {
             slidesPerView: 2,
           },
 
@@ -81,7 +84,7 @@ export default function DiscountedProduct() {
           data
             .filter((data) => data.label == "sale")
             .map((slide, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide className='text-center' key={index}>
                 <SingleProduct data={slide} />
               </SwiperSlide>
             ))}

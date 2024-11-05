@@ -24,7 +24,7 @@ export default function SingleProductPage() {
           <RiArrowDropRightLine className="text-primary text-[25px]" />
           <span className="text-darkGray">{description.title}</span>
         </div>
-        <div className="flex gap-[63px]">
+        <div className="flex flex-col lg:flex-row items-center gap-[63px]">
           <ProductImage images={images} />
           <ProductDescription {...description} />
         </div>

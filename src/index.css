@@ -1,32 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  
   p {
     @apply text-[16px] font-normal leading-[150%] text-primary;
   }
-  a {   
+  a {
     display: inline-block;
   }
 }
 @layer utilities {
- 
   body {
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
   }
-  
 
   .container {
     max-width: 1340px;
     width: 100%;
-    padding-inline:20px;
+    padding-inline: 20px;
     margin-inline: auto;
   }
   .unset {
@@ -45,7 +42,6 @@
     min-height: 380px;
   }
 
- 
   .afterBorder {
     position: relative;
   }
@@ -116,20 +112,11 @@
   .bgChange {
     postiion: relative;
     transition: all 0.5s ease;
-  }
-  .bgChange::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(30, 27, 24, 0.5);
-    z-index: -1;
     backdrop-filter: blur(10px);
-    transition: all 0.5s ease;
+    height:80px;
   }
-
+ 
   /* 
 button hover effect */
   .cart-hover:hover .bounceNew {
@@ -149,7 +136,6 @@ button hover effect */
     }
   }
 
-  
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -165,58 +151,55 @@ button hover effect */
 
   .separator {
     display: flex;
-    align-items: center;   
+    align-items: center;
     font-size: 14px;
-}
+  }
 
-.separator::before,
-.separator::after {
+  .separator::before,
+  .separator::after {
     content: "";
     flex: 1;
     border-bottom: 1px solid #666; /* Adjust line color as needed */
-    
-}
-.separator::before{
-  margin: 0 10px 0 0;
-}
-.separator::after{
-  margin: 0 0 0 10px;
-}
+  }
+  .separator::before {
+    margin: 0 10px 0 0;
+  }
+  .separator::after {
+    margin: 0 0 0 10px;
+  }
 
   /* pagination */
-  .venus-pagination{
-    display:flex;
-    gap:6px;
+  .venus-pagination {
+    display: flex;
+    gap: 6px;
   }
-  .page-item{
-    background:#f5f5f5;     
-    
-    display:grid;
-    place-content:center;
+  .page-item {
+    background: #f5f5f5;
+
+    display: grid;
+    place-content: center;
   }
- 
-  .page-link{
-    width:40px;
-    height:40px;
-    text-align:center;
-    line-height:40px;
-    color:#525252;
+
+  .page-link {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #525252;
     transition: all 0.3s ease;
   }
-  .page-link svg{
-    margin-top:12px;
-    transform:translatex(70%)
-    
+  .page-link svg {
+    margin-top: 12px;
+    transform: translatex(70%);
   }
-  .page-link:is(:hover){
-    background:#D25F5D;
-    color:#fff;
+  .page-link:is(:hover) {
+    background: #d25f5d;
+    color: #fff;
   }
-  .active-p .page-link{    
-    background:#D25F5D;
-    color:#fff;
+  .active-p .page-link {
+    background: #d25f5d;
+    color: #fff;
   }
-  
 }
 @layer components {
   /* navigation */
@@ -229,7 +212,7 @@ button hover effect */
 
   /* header */
   .header-wrap {
-    @apply flex justify-between min-h-[48px] items-center pt-[24px] px-6 xl:px-0;
+    @apply flex justify-between min-h-[48px] items-center pt-[24px]  xl:px-0;
   }
   .cart-btn {
     @apply w-[48px] h-[48px] bg-accent1 rounded-full grid place-content-center;
@@ -240,18 +223,16 @@ button hover effect */
     @apply bg-bgHero mt-[0px] relative;
   }
   .hero-title {
-    @apply text-[150px] font-light leading-[200%] font-fraunces;
+    @apply text-[100px] lg:text-[150px] font-light xl:leading-[200%] font-fraunces;
   }
   .hero-content {
     @apply text-[16px] font-normal leading-[150%] text-primary max-w-[526px] w-full;
   }
 
-  /* service */
-  .service {
-    @apply flex justify-between;
-  }
+/* service */
+  
   .service-card {
-    @apply w-[311px] border-r-[1px] border-darkGray flex gap-[20px] align-middle [&>span]:content-center pl-[30px];
+    @apply max-w-[311px]  w-full flex gap-4 items-start sm:justify-center lg:flex-col lg:ml-5 xl:ml-0 xl:flex-row [&>figure]:mt-2 [&>figure]:w-[60px];
   }
   .service-title {
     @apply text-[20px] font-medium leading-[140%] text-lightGray capitalize mb-[10px];
@@ -268,7 +249,7 @@ button hover effect */
 
   /* title */
   .title {
-    @apply text-[40px] font-semibold text-white leading-[120%] font-fraunces;
+    @apply text-[25px] sm:text-[40px] font-semibold text-white leading-[120%] font-fraunces;
   }
   .title2 {
     @apply text-[32px] font-normal leading-[125%] text-cardTitle font-fraunces;
@@ -277,8 +258,10 @@ button hover effect */
     @apply text-[18px] font-normal leading-[156%] text-cardTitle capitalize;
   }
   .f-title {
-    @apply text-[20px] font-medium;
+    @apply text-nowrap sm:text-[20px] font-medium;
   }
+
+  /* btn group */
   .btn-group {
     @apply flex gap-5 *:w-[180px] *:h-[56px] *:rounded-[4px] *:flex *:justify-center *:items-center *:bg-accent1 *:gap-2 capitalize *:text-white;
   }
@@ -292,10 +275,8 @@ button hover effect */
   }
 }
 
-
-
- /* swiper slider */
- .swiper-pagination-bullets.swiper-pagination-horizontal {
+/* swiper slider */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: flex;
   justify-content: center;
   align-items: center;

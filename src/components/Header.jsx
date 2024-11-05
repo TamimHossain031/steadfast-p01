@@ -11,10 +11,10 @@ import Nav from "./Nav";
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
-  const [navShow, setNavShow] = useState(true);
+  const [navShow, setNavShow] = useState(false);
 
   const page = useLocation().pathname.slice(1);
-  const setHeaderBg = (page == "checkout" || page == "login");
+  const setHeaderBg = page == "checkout" || page == "login";
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const toggleNav = () => setNavShow(!navShow);
@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`z-[100] max-w-[1440px] w-full h-[109px] fixed top-0 pb-5 ${
+      className={`z-[1000] w-full h-[109px] fixed top-0 pb-5 ${
         setHeaderBg && "bg-bgHero"
       }`}
       id="header"
@@ -41,17 +41,17 @@ export default function Header() {
         <Nav showNav={navShow} handleNav={toggleNav} />
 
         {/* cart & search  */}
-        <div className="w-[160px] hidden  md:flex justify-between relative">
+        <div className="max-w-[160px] w-full hidden  md:flex justify-between relative">
           <div className="pt-2">
             <button onClick={toggleSearch}>
               <img src={search} alt="search" />
             </button>
             <input
-              className={`px-2 outline-none bg-transparent border rounded border-accent1 h-[40px] absolute top-0 right-[110%] text-white  ${
+              className={`px-2 max-w-[200px] z-[100] outline-none bg-bgDark xl:bg-transparent border rounded border-accent1 h-[40px] absolute top-[100%] right-[80%] text-white  ${
                 showSearch ? "visible " : " hidden"
               }`}
               type="text"
-              placeholder='Search'
+              placeholder="Search"
             />
           </div>
           <button>
@@ -73,7 +73,7 @@ export default function Header() {
             onClick={toggleNav}
             className="text-white hover:text-accent1 text-3xl"
           >
-            {!navShow ? <RxCross1 /> : <CiMenuFries />}
+            {navShow ? <RxCross1 /> : <CiMenuFries />}
           </button>
         </div>
       </div>

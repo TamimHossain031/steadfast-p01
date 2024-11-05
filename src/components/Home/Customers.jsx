@@ -23,6 +23,18 @@ export default function Customers() {
           pagination={{
             clickable: true,
           }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+  
+            865: {
+              slidesPerView: 3,
+            }
+          }}
           modules={[Pagination]}
           className="customerSwiper"
         >

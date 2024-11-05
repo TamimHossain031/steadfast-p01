@@ -31,9 +31,9 @@ export default function TopCategory() {
 
   const { isLast, isFirst } = slideBegOrNot;
   return (
-    <section className="container mb-[135px]">
-      <div className="align-middle mb-[48px] flex justify-between">
-        <h2 className="title ">Top Categories</h2>
+    <section className="container mb-[50px] sm:mb-[135px]">
+      <div className="align-middle sm:mb-[48px] flex justify-between">
+        <h2 className="title">Top Categories</h2>
         <div className="flex gap-4 *:w-[48px] *:h-[48px] *:grid *:place-content-center">
           <button className={isFirst ? "disable" : ""} onClick={handlePrev}>
             <BsArrowLeft color="white" size={20} />{" "}
@@ -56,14 +56,14 @@ export default function TopCategory() {
           0: {
             slidesPerView: 1,
           },
-          400: {
+          640: {
             slidesPerView: 2,
           },
 
           865: {
             slidesPerView: 3,
           },
-          1000: {
+          1280: {
             slidesPerView: 4,
           },
         }}
