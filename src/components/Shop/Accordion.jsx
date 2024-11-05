@@ -1,42 +1,10 @@
 import { useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import SubCategory from "./SubCategory";
+import { subCategory } from "../../Db/subCategory";
 export default function Accordion() {
   const [active, setActive] = useState(1);
-  const cat = [
-    {
-      name: "mans wallet",
-      subCat: [
-        {
-          name: "fold wallet",
-        },
-        {
-          name: "front pocket wallet",
-        },
-        {
-          name: "long wallet",
-        },
-        {
-          name: "long wallet",
-        },
-      ],
-    },
-    {
-      name: "Woman's  Bag",
-    },
-    {
-      name: "Hand Bag",
-    },
-    {
-      name: "BagPacks",
-    },
-    {
-      name: "Leather Bag",
-    },
-    {
-      name: "Student Bag",
-    },
-  ];
+  
 
   const handleActive = () => {
     setActive((i) => !i);
@@ -62,7 +30,7 @@ export default function Accordion() {
           active ? "opacity-100" : "opacity-0"
         }`}
       >
-        {cat.length && cat.map((sub, i) => <SubCategory key={i} {...sub} />)}
+        {subCategory.length && subCategory.map((sub, i) => <SubCategory key={i} {...sub} />)}
       </div>
     </div>
   );
