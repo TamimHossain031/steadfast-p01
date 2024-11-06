@@ -168,38 +168,7 @@ button hover effect */
     margin: 0 0 0 10px;
   }
 
-  /* pagination */
-  .venus-pagination {
-    display: flex;
-    gap: 6px;
-  }
-  .page-item {
-    background: #f5f5f5;
-
-    display: grid;
-    place-content: center;
-  }
-
-  .page-link {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    color: #525252;
-    transition: all 0.3s ease;
-  }
-  .page-link svg {
-    margin-top: 12px;
-    transform: translatex(70%);
-  }
-  .page-link:is(:hover) {
-    background: #d25f5d;
-    color: #fff;
-  }
-  .active-p .page-link {
-    background: #d25f5d;
-    color: #fff;
-  }
+  
 }
 @layer components {
   /* logo size */
@@ -233,10 +202,9 @@ button hover effect */
     @apply font-normal leading-[150%] text-primary max-w-[526px] w-full pr-4 md:pr-0;
   }
 
-/* service */
-  
+/* service */  
   .service-card {
-    @apply max-w-[311px]  w-full flex gap-4 items-start sm:justify-center lg:flex-col lg:ml-5 xl:ml-0 xl:flex-row [&>figure]:mt-2 [&>figure]:w-[60px];
+    @apply max-w-[311px]  w-full flex gap-4 items-start sm:justify-center lg:flex-col lg:ml-5 xl:ml-0 xl:flex-row [&>figure]:mt-2 [&>figure]:w-[60px] md:[&>figure]:w-fit;
   }
   .service-title {
     @apply text-[20px] font-medium leading-[140%] text-lightGray capitalize mb-[10px];
@@ -271,6 +239,26 @@ button hover effect */
   }
   .price-btnGroup {
     @apply flex *:h-[40px] justify-between gap-5 *:border-[1px] *:flex-1 *:border-gray *:rounded-[4px] *:flex *:justify-center *:items-center *:font-normal;
+  }
+
+  /* pagination */
+  .venus-pagination {
+   @apply gap-[6px] flex
+  }
+  .page-item {
+    @apply bg-[#f5f5f5] grid place-content-center    
+  }
+  .page-link {
+    @apply w-6 sm:w-10  h-6 sm:h-10 grid place-content-center text-[#525252] transition-all duration-300 text-[10px] sm:text-[16px]
+   
+  }
+ 
+  .page-link:is(:hover) {
+    @apply bg-[#d25f5d] text-white   
+  }
+  .active-p .page-link {
+    @apply bg-[#d25f5d] text-white
+   
   }
 
   /* footer */
