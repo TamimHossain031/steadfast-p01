@@ -30,24 +30,24 @@ export default function Cart() {
           cart.map((single, i) => (
             <div
               key={i}
-              className=" w-full flex  justify-between gap-4  items-center pb-4"
+              className=" w-full flex  justify-between gap-3 sm:gap-4  items-center pb-4"
             >
-              <figure className="flex gap-5 items-center max-w-[356px] w-full">
+              <figure className="flex gap-2 sm:gap-5 items-center max-w-[356px] w-full">
                 <img
                   src={mainProduct}
                   alt=" product"
                   className="w-[80px] h-[80px] rounded-[4px] object-cover"
                 />
                 <div>
-                  <figcaption className="text-white font-medium">
+                  <figcaption className="text-white leading-[150%] font-light sm:font-medium text-[10px] sm:text-[16px]">
                     Dark black - wallet
                   </figcaption>
-                  <figcaption className="text-primary">Color : Blue</figcaption>
+                  <figcaption className="text-primary text-[10px] sm:text-[16px]">Color : Blue</figcaption>
                 </div>
               </figure>
               <div>
-                <h3 className="text-white">৳1150</h3>
-                <del className="text-primary">৳1150</del>
+                <h3 className="text-white text-[10px] sm:text-[16px]">৳1150</h3>
+                <del className="text-primary text-[10px] sm:text-[16px]">৳1150</del>
               </div>
               {/* add quantity of product */}
               <AddQuantity getData={single} setData={updateProduct} />

@@ -21,7 +21,7 @@ export default function AddQuantity({ setData, getData }) {
       <h3 className={`capitalize font-medium leading-[150%] text-white mb-4 ${page == 'checkout' && 'hidden'}`}>
         quantity
       </h3>
-      <div className="flex justify-evenly w-[137px] h-[40px] bg-neutral-100 *:w-[45px] *:grid *:place-content-center">
+      <div className="flex justify-evenly w-[100px] sm:w-[137px] h-[40px] bg-neutral-100 *:w-[33px] sm:*:w-[45px] *:grid *:place-content-center">
         <button
           className="text-quantityBtn text-[24px] font-bold"
           onClick={() => setQuantity("minus")}

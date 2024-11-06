@@ -1,7 +1,7 @@
 import AnimatedCursor from "react-animated-cursor";
 export default function CursorMove() {
   return (
-    <>
+    <div className='hidden sm:block relative z-[2000]'>
        <AnimatedCursor
       innerSize={0}
       outerSize={20}
@@ -9,8 +9,7 @@ export default function CursorMove() {
       outerAlpha={0.2}
       innerScale={1}
       outerScale={5}
-      showSystemCursor={true}
-      
+      showSystemCursor={true}      
       clickables={[
         'a',
         'input[type="text"]',
@@ -36,6 +35,6 @@ export default function CursorMove() {
         }
       ]}
     />
-    </>
+    </div>
   );
 }
