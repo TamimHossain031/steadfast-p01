@@ -14,6 +14,7 @@ export default function Login({ onLogin }) {
   return (
     <div>
       <form onSubmit={handleSubmit(setData)}>
+        {/* phone number field */}
         <Field error={errors.phone}>
           <input
             {...register("phone", {
@@ -24,6 +25,8 @@ export default function Login({ onLogin }) {
             placeholder="Phone"
           />
         </Field>
+
+        {/* password field */}
         <Field error={errors.password}>
           <input
             {...register("password", {
@@ -35,12 +38,15 @@ export default function Login({ onLogin }) {
           />
         </Field>
 
+        {/* submit */}
         <input
           className="w-full h-[64px] bg-accent1 rounded px-5 py-[18px] text-white mt-[35px] cursor-pointer"
           type="submit"
           value="Login"
         />
       </form>
+
+      {/* forgate password */}
       <div className='text-center'>
         <Link className="text-red text-center mt-[26px]">Forgot password?</Link>
       </div>

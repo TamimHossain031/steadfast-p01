@@ -19,6 +19,7 @@ export default function Registration() {
   return (
     <div>
       <form onSubmit={handleSubmit(setData)}>
+        {/* name field */}
         <Field error={errors.name}>
           <input
             {...register("name", {
@@ -29,7 +30,7 @@ export default function Registration() {
             placeholder="Name"
           />
         </Field>
-
+        {/* phone number field */}
         <Field error={errors.phone} hasBtn={true}>
           <input
             {...register("phone", {
@@ -40,7 +41,7 @@ export default function Registration() {
             placeholder="Phone Number"
           />
         </Field>
-
+        {/* otp field */}
         <Field error={errors.otp} cross={true}>
           <div className='relative'>
             <input
@@ -55,6 +56,7 @@ export default function Registration() {
             <span className='absolute w-6 h-6 right-4 top-1/3 text-[#A0A49D] grid place-content-center cursor-pointer' onClick={doCrossFunc}><RxCross1 /></span>
           </div>
         </Field>
+        {/* password field */}
         <Field error={errors.password}>
           <input
             {...register("password", {
@@ -66,6 +68,7 @@ export default function Registration() {
           />
         </Field>
 
+        {/* submit */}
         <input
           className="w-full h-[64px] bg-accent1 rounded px-5 py-[18px] text-white mt-[35px] cursor-pointer"
           type="submit"
