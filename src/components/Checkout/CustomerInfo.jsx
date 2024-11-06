@@ -89,7 +89,7 @@ export default function CustomerInfo() {
             <div className="flex gap-2 items-center">
               <input
                 {...register(getData[3])}
-                className="flex-1 outline-none placeholder:text-neutral-500 text-[16px] appearance-none border-[#94A3B8] checked:border-accent1 checked:border-[6px] w-5 h-5 border-[1.5px]  rounded-full"
+                className="flex-1 outline-none placeholder:text-neutral-500 text-[16px] appearance-none border-[#94A3B8] checked:border-accent1 checked:border-[6px] w-3 h-3 sm:w-5 sm:h-5 border-[1.5px]  rounded-full"
                 type="radio"
                 name={getData[3]}
                 id={"inside"}
@@ -98,7 +98,7 @@ export default function CustomerInfo() {
               />
               <label
                 htmlFor={"inside"}
-                className="text-white capitalize font-normal font-onest"
+                className="text-white capitalize font-normal font-onest text-[10px] sm:text-[16px]"
               >
                 inside Dhaka tk.60
               </label>
@@ -106,7 +106,7 @@ export default function CustomerInfo() {
             <div className="flex gap-2 items-center">
               <input
                 {...register(getData[3])}
-                className="flex-1 outline-none placeholder:text-neutral-500 text-[16px] appearance-none checked:border-accent1 checked:border-[6px]  w-5 h-5 border-[1.5px] border-[#94A3B8] rounded-full"
+                className="flex-1 outline-none placeholder:text-neutral-500 text-[16px] appearance-none checked:border-accent1 checked:border-[6px]  w-3 h-3 sm:w-5 sm:h-5 border-[1.5px] border-[#94A3B8] rounded-full"
                 type="radio"
                 name={getData[3]}
                 id={"outside"}
@@ -114,7 +114,7 @@ export default function CustomerInfo() {
               />
               <label
                 htmlFor={"outside"}
-                className="text-white capitalize font-normal font-onest"
+                className="text-white capitalize font-normal font-onest text-[10px] sm:text-[16px]"
               >
                 outside Dhaka tk.120
               </label>

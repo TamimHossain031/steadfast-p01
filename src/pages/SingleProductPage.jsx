@@ -13,6 +13,8 @@ export default function SingleProductPage() {
   return (
     <section className="container pt-[124px]">
       <div className="sm:px-[39px]">
+
+        {/* Page navigation */}
         <div className="flex mb-[21px]">
           <NavLink to="/" className="text-primary">
             Home
@@ -25,11 +27,17 @@ export default function SingleProductPage() {
           <span className="text-darkGray">{description.title}</span>
         </div>
         <div className="flex flex-col lg:flex-row items-center gap-[63px]">
+          {/* single product Images */}
           <ProductImage images={images} />
+
+          {/* single product description */}
           <ProductDescription {...description} />
         </div>
       </div>
+      {/* product description, details and review */}
       <ProductInfo/>
+
+      {/* recently discount products */}
       <DiscountedProduct />
     </section>
   );
