@@ -5,7 +5,7 @@ import {
   FaTwitter,
 } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/header/logo.svg";
+import logo from "/logo.svg";
 export default function Footer() {
   const page = useLocation().pathname.slice(1);
 

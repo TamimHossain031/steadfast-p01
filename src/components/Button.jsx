@@ -3,7 +3,7 @@ import { GoArrowRight } from "react-icons/go";
 export default function Button(props) {
   return (
     <button
-      className={`hover-effect1 mt-[54px] text-white ${props?.className}`}
+      className={`hover-effect1 mt-4 md:mt-[54px] text-white ${props?.className}`}
     >
       shop now{" "}
       <span className="pt-[4px]  transition-all">

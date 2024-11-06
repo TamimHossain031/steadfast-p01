@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
 import { Link, useLocation } from "react-router-dom";
 import search from "../assets/header/Search.svg";
 import cart from "../assets/header/cart.svg";
-import logo from "../assets/header/logo.svg";
+import logo from "/logo.svg";
 import wishlist from "../assets/header/wish.svg";
 import addHeaderBg from "./Helpers/addHeaderBg";
 import Nav from "./Nav";

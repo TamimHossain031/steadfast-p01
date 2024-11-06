@@ -8,7 +8,7 @@
 
 @layer base {
   p {
-    @apply text-[16px] font-normal leading-[150%] text-primary;
+    @apply text-[12px] md:text-[16px] font-normal leading-[150%] text-primary;
   }
   a {
     display: inline-block;
@@ -227,10 +227,10 @@ button hover effect */
     @apply bg-bgHero mt-[0px] relative;
   }
   .hero-title {
-    @apply text-[100px] lg:text-[150px] font-light xl:leading-[200%] font-fraunces;
+    @apply text-[40px] md:text-[100px] lg:text-[150px] font-light xl:leading-[200%] font-fraunces ml-[80px];
   }
   .hero-content {
-    @apply text-[16px] font-normal leading-[150%] text-primary max-w-[526px] w-full;
+    @apply font-normal leading-[150%] text-primary max-w-[526px] w-full pr-4 md:pr-0;
   }
 
 /* service */
@@ -244,7 +244,7 @@ button hover effect */
 
   /* button */
   .btn-primary {
-    @apply py-[16px] px-[24px] rounded-[4px] flex gap-2 capitalize text-[16px];
+    @apply py-[8px] md:py-[16px] px-[12px] md:px-[24px] rounded-[4px] flex gap-2 capitalize text-[10px] md:text-[16px];
   }
 
   .disable {
@@ -267,7 +267,7 @@ button hover effect */
 
   /* btn group */
   .btn-group {
-    @apply flex gap-5 *:w-[180px] *:h-[56px] *:rounded-[4px] *:flex *:justify-center *:items-center *:bg-accent1 *:gap-2 capitalize *:text-white;
+    @apply flex gap-5 *:w-[100px] sm:*:w-[180px] *:h-[40px] sm:*:h-[56px] *:rounded-[4px] *:flex *:justify-center *:items-center *:bg-accent1 *:gap-2 capitalize *:text-white *:text-[10px] sm:*:text-[16px];
   }
   .price-btnGroup {
     @apply flex *:h-[40px] justify-between gap-5 *:border-[1px] *:flex-1 *:border-gray *:rounded-[4px] *:flex *:justify-center *:items-center *:font-normal;

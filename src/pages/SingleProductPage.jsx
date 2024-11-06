@@ -12,7 +12,7 @@ export default function SingleProductPage() {
 
   return (
     <section className="container pt-[124px]">
-      <div className="px-[39px]">
+      <div className="sm:px-[39px]">
         <div className="flex mb-[21px]">
           <NavLink to="/" className="text-primary">
             Home

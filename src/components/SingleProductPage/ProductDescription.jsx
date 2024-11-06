@@ -29,7 +29,7 @@ export default function ProductDescription(description) {
   };
 
   return (
-    <div className="flex-1 ">
+    <div className="flex-1">
       <h2 className="font-medium text-[24px] leading-[133%] text-white my-[10px]">
         {title}
       </h2>
